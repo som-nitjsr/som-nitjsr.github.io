@@ -10,10 +10,10 @@ It has mainlly two Part
 2. around 10 Services written in .Net Framework 4.6 
 
 **Current Challenges**  
-1. Developer wer building locally and deploying mannully
+1. Developer were building locally and deploying mannully
 2. Lots of config issues while moving from Dev to Prod
 3. Typical works locally but not in production problem
-4. No Gurantee of build in prodction is what signed of by SQE team
+4. No Guarantee of build in prodction is what signed of by SQE team
 5. Can not revert the changes to previous build
 6. Lots of time wasted in supporting the live enviroment
 7. Lots of database change issue due to manuall deployment
