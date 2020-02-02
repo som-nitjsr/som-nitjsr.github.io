@@ -19,7 +19,7 @@ It has mainlly two Part
 7. Lots of database change issue due to manuall deployment
 8. No version control for Database script   
 
-<img scr='assets/existingsytem_aks.png' >
+<img src='/assets/existingsytem_aks.png' >
 
 **Few constraints**
 1. Can not move services to .Net Core
