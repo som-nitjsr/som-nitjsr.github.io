@@ -4,13 +4,15 @@ comments: true
 PAGE_URL: https://som-nitjsr.github.io/ 
 PAGE_IDENTIFIER: aks_1 
 title:  "Migrating Legacy .Net Framework To Aks"
-date:   2019-11-18 13:36:37 +0530
+date:   2020-02-03 13:36:37 +0530
 categories: Aks
 ---
 I got Oppertunity to Migrate a existing  Legacy app to host in AKS.
 It has mainlly two Part 
 1. Couple of SPA  in  Angular
 2. around 10 Services written in .Net Framework 4.6 
+
+It is a part of Applied Cloud Stories initiative [https://aka.ms/applied-cloud-stories](https://aka.ms/applied-cloud-stories)
 
 **Current Challenges**  
 1. Developer were building locally and deploying mannully
