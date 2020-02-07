@@ -21,9 +21,23 @@ It has mainlly two Part
 
 <img src='/assets/existingsytem_aks.png' >
 
-**Few constraints**
-1. Can not move services to .Net Core
+**Few Expection from  new solution**
+1. Can not modify the code  
 2. will need to use .net Frmaework only api
 3. Provide a fully automated and Gated CI/CD
+4. will need to Support different environment dev, qa,demo and live
+5. Support auto scalling
+6. Minimized the cost
+7. Increase the operation efficieny 
+
+I wanted to use the Kubernets for compute and use couple of azure pass services like Azure Sql Database, ACR etc.
+One of first challenge was to find the k8s environment which support the hybrid scenario and AKS was at Rescue.
+We have to use the windows node for .net framework images, but we wanted to use linux node for angular app and new .net core api.
+
+<img src='/assets/newsytem_aks.png'>
+
+   **New Architecture uisng Azure Devops and AKS**
+Going fowward I am going to describe the challenges faced and how we overcome those challenges.
+ 
 
 
