@@ -173,8 +173,9 @@ export class SettingsService {
     }
 }
 ``` 
+
 3. **Create a Http service to read settings from assets folder**
-```Javascript
+```JavaScript
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SettingsService } from './settings.service';
@@ -203,6 +204,7 @@ export class SettingsHttpService {
     }    
 }
 ```
+
 4. **Create a template setting file in asset folder**
 ```json
 {
