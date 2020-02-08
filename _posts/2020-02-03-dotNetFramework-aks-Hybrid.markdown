@@ -80,7 +80,8 @@ Again Azure File share was at rescue.
 
 sample AKS deployment file
 
-`apiVersion: apps/v1
+` 
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mypodapi-#{namespace}#
@@ -143,8 +144,8 @@ spec:
 **Pros Of using Azure File Share**
 1. One of best thing,  I was easily able to migrate the existing files from local VM to Azure File share
 2. No code change required  for using azure File share.(even local file path hardcoded in code (not the best practise) as you can see in example deployment code) 
-2. It is supper easy and cost effective
-4. Of Course it provide other in build feature like HA and DR.     
+2. It is super easy to configure/use  and cost effective
+4. Of Course it provide other in built feature like HA and DR.     
 
 ### Angular Docker Container runtime variables
  coming soon  
