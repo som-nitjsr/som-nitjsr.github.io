@@ -80,7 +80,7 @@ Again Azure File share was at rescue.
 
 sample AKS deployment file
 
-` 
+`
 apiVersion: apps/v1
 kind: Deployment
 metadata:
