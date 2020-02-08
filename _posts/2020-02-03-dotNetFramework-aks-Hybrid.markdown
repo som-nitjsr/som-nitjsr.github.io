@@ -216,6 +216,7 @@ export class SettingsHttpService {
   }
 ```
 5. **create a setting template file**
+
 ```json
 {
     "emailVaild": "${Identity_URL}/api/ValidateEmail?",
@@ -224,7 +225,7 @@ export class SettingsHttpService {
 
 ```
 
-**Passing the environment variable to container**
+6. **Passing the environment variable to container**
 
 ```Yaml
 apiVersion: apps/v1
