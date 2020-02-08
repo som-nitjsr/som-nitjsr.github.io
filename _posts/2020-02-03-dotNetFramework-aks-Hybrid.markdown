@@ -58,7 +58,8 @@ Going forward I am going to describe the challenges faced and how we overcome th
  Still I was facing one  challenge: Updated the connection string for edmx file. I  tried different combination but could not succeed due to " in connection string.
 This is how I have solved it. 
 
-`public partial class MyEntities : DbContext
+```c#
+public partial class MyEntities : DbContext
     {
         static string ConnStr = $"metadata=res://*/Entities.MyEntityModel.csdl|res://*/Entities.MyEntityModel.ssdl|res://*/Entities.MyEntityModel.msl;provider=System.Data.SqlClient;provider connection string=\"{ConfigurationManager.ConnectionStrings["MyEntities"].ConnectionString}\"";
         public MyEntities()
@@ -66,7 +67,7 @@ This is how I have solved it.
         {
         }
     }
-`
+```
 
 I was changing the  DbContext string at runtime and was able to achieve the change of edmx  connection string at runtime in container.
 ### Azure File Share for AKS Volume 
@@ -80,7 +81,7 @@ Again Azure File share was at rescue.
 
 sample AKS deployment file
 
-`
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -139,7 +140,7 @@ spec:
             secretName: azure-secret
             shareName: myshare
             readOnly: false
-`
+```
 
 **Pros Of using Azure File Share**
 1. One of best thing,  I was easily able to migrate the existing files from local VM to Azure File share
