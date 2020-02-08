@@ -149,8 +149,137 @@ spec:
 4. Of Course it provide other in built feature like HA and DR.     
 
 ### Angular Docker Container runtime variables
- coming soon  
+We were also facing the same issue of updating the Linux container at runtime as we need to deploy the same image in different environment. This is how we have solved it.  
+1. **Create a setting class**
+``` Javascript
+export class Settings {
+  
+    emailVaild: string;
+    valdiateUser: string;
+}
+```
+2. **Create a service class**
 
-**Continued.....**
+``` JavaScript
+import { Settings } from './settings';
+import { Injectable } from '@angular/core';
+
+@Injectable({ providedIn: 'root' })
+export class SettingsService {
+    public settings: Settings;
+
+    constructor() {
+        this.settings = new Settings();
+    }
+}
+``` 
+3. **Create a Http service to read settings from assets folder**
+```Javascript
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { SettingsService } from './settings.service';
+import { Settings } from './settings';
+
+@Injectable({ providedIn: 'root' })
+export class SettingsHttpService {
+
+    constructor(private http: HttpClient, private settingsService: SettingsService) {
+    }
+
+    initializeApp(): Promise<any> {
+
+        return new Promise(
+            (resolve) => {
+                this.http.get('assets/settings.json')
+                    .toPromise()
+                    .then(response => {
+                            this.settingsService.settings = response as Settings;
+                            resolve();
+                          
+                        }
+                    )
+            }
+        );
+    }    
+}
+```
+4. **Create a template setting file in asset folder**
+```json
+{
+ "emailVaild": "https://identityapi-dev.abc.com/api/ValidateEmail?",
+  "valdiateUser":"https://profileapi-dev.abc.com/api/ValidateUser",
+  }
+```
+5. **create a setting template file**
+```json
+{
+    "emailVaild": "${Identity_URL}/api/ValidateEmail?",
+     "valdiateUser":"${Profile_URL}/api/ValidateUser",
+}
+```
+**Passing the environment variable to container**
+
+```Yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myimage-#{namespace}#
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myimage-#{namespace}#
+  template:
+    metadata:
+      labels:
+        app: myimage-#{namespace}#
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: myimage-#{namespace}#
+        image: arc.azurecr.io/myimage:#{Build.BuildId}#
+        
+        resources:
+          limits:
+            cpu: "0.05"
+            memory: 200M
+          requests:
+            cpu: "0.025"
+            memory: 100M
+        env:
+        - name: Identity_URL
+          value: "https://identity#{host}#.com"
+        - name: Profile_URL
+          value: "https://emailapi#{host}#.com"
+
+        
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: registrysecret
+```
+**Inject  environment variable in  Angular Image using envsubst**
+```Yaml
+# Step 1: Build the app in image 'builder'
+FROM node:10.16-alpine AS builder
+
+WORKDIR /usr/src/app
+COPY . .
+RUN npm ci && npm run build
+
+# Step 2: Use build output from 'builder'
+FROM nginx:stable-alpine
+LABEL version="1.0"
+
+COPY nginx.conf /etc/nginx/nginx.conf
+
+WORKDIR /usr/share/nginx/html
+COPY --from=builder /usr/src/app/dist/mysource/  .
+CMD ["/bin/sh",  "-c",  "envsubst </usr/share/nginx/html/assets/settings.template.json> /usr/share/nginx/html/assets/settings.json && exec nginx -g 'daemon off;'"]
+
+```
+
+
 {% if page.comments %} {% include disqus.html %} {% endif %}
 
