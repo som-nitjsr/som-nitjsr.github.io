@@ -287,7 +287,13 @@ COPY --from=builder /usr/src/app/dist/mysource/  .
 CMD ["/bin/sh",  "-c",  "envsubst </usr/share/nginx/html/assets/settings.template.json> /usr/share/nginx/html/assets/settings.json && exec nginx -g 'daemon off;'"]
 
 ```
+**Version control for Database**
+One of the challenge was to deploy the database script in different database without any discrepancy and manual intervention.
+Again Sql DACPAC was at rescue.
+1. Created a Sql DACPAC project
+2. Completed a Azure Pipe line in Azure Devops
+3. Created Release for different environment. 
 
-
+Will add more detail for each steps.
 {% if page.comments %} {% include disqus.html %} {% endif %}
 
