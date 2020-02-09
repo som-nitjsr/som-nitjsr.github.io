@@ -288,6 +288,7 @@ CMD ["/bin/sh",  "-c",  "envsubst </usr/share/nginx/html/assets/settings.templat
 
 ```
 **Version control for Database**
+
 One of the challenge was to deploy the database script in different database without any discrepancy and manual intervention.
 Again Sql DACPAC was at rescue.
 1. Created a Sql DACPAC project
