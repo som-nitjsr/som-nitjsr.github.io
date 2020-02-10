@@ -3,11 +3,12 @@ layout: post
 comments: true
 PAGE_URL: https://som-nitjsr.github.io/ 
 PAGE_IDENTIFIER: aks_1 
-title:  "Migrating Legacy .Net Framework To AKS"
+title:  "Migrating Legacy .Net Framework Apps To Kubernetes"
+description: Kubernetes| Azure| Devops| AKS| Azure Devops Pipelines| CI CD| Windows Container | Docker
 date:   2020-02-03 13:36:37 +0530
-categories: Aks
+categories: Aks|Kubernetes
 ---
-I got Opportunity to Migrate a existing  Legacy app to host in AKS.
+I got Opportunity to Migrate an existing  legacy app to Kubernetes.
 It has mainly two Part 
 1. Couple of SPA  in  Angular
 2. around 10 Services written in .Net Framework 4.6 
@@ -24,7 +25,7 @@ It is a part of Applied Cloud Stories initiative [https://aka.ms/applied-cloud-s
 7. Lots of database change issue due to manual deployment
 8. No version control for Database script   
 
-<img src='/assets/existingsytem_aks.png' >
+<img alt='Kubernetes' src='/assets/existingsytem_aks.png' >
 
 **Few Expectation from  new solution**
 1. Can not modify the code  
@@ -39,7 +40,7 @@ I wanted to use the Kubernets for compute and use couple of azure pass services 
 One of first challenge was to find the k8s environment which support the hybrid scenario and AKS was at Rescue.
 We have to use the windows node for .net framework images, but we wanted to use Linux node for angular app and new .net core api.
 
-<img src='/assets/newsytem_aks.png'>
+<img alt='Kubernetes' src='/assets/newsytem_aks.png'>
 
 ###  **New Architecture using Azure Devops and AKS**
 
