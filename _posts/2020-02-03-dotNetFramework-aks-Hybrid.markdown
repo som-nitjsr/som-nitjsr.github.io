@@ -1,12 +1,12 @@
 ---
 layout: post
 comments: true
-PAGE_URL: https://som-nitjsr.github.io/ 
-PAGE_IDENTIFIER: aks_1 
+URL: https://som-nitjsr.github.io/aks/2020/02/03/dotNetFramework-aks-Hybrid.html 
+IDENTIFIER: aks_1 
 title:  "Migrating Legacy .Net Framework Apps To Kubernetes"
 description: Kubernetes| Azure| Devops| AKS| Azure Devops Pipelines| CI CD| Windows Container | Docker
 date:   2020-02-03 13:36:37 +0530
-categories: Aks|Kubernetes
+categories: Aks
 ---
 I got Opportunity to Migrate an existing  legacy app to Kubernetes.
 It has mainly two Part 
