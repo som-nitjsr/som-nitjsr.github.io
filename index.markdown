@@ -4,4 +4,12 @@
 
 layout: home
 ---
-Its My Day to day on hand experience with Azure 
+Its my day to day on hand experience with
+ Azure
+ Kubenetes
+ Azure Devops
+ .Net Core
+ Bot 
+
+ AI and ML
+ 
