@@ -1,6 +1,6 @@
 layout: post
 comments: true
-URL: https://som-nitjsr.github.io/aks/2020/12/24/applesignin-azuread-b2c.html 
+
 IDENTIFIER: OpenId_1 
 title:  "Set up Apple sign-up and sign-in with OpenID Connect using Azure Active Directory B2C"
 description: Apple Sign In| Azure|AD B2C| OpenId Connect| 
