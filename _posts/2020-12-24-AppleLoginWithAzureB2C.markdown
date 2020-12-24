@@ -15,7 +15,14 @@ I have followed [Authenticating Users with Sign in with Apple](https://developer
  The main challenge was passing the email id and name from apple to Azure AD B2C.
 
 The issue is apple provide the User info in custom payload 
-```json{"user":{"fisrtanme","lastname"}}
+```Json
+{
+ "user":
+  {
+  "fisrtanme":"fisrtname",
+  "lastname":"lastname"
+  }
+}
 ```
 At the end of this doc. you shall be able to configure the azure B2C App while give token with 3 claims email id, first name and last name.
 
@@ -30,9 +37,11 @@ This whole setup has below parts
 4. Configure a sign In User flow.
 
 **Register a App in Apple**
+
 On the Register an App ID page, provide a app description and a bundle ID, and select **Sign in with Apple from the capabilities list**. Then click Continue and . 
 
 **Create the service Id application**
+
 Create a Service Id in Apple Developer account as Below 
 make sure to select Sign in With Apple.
 in Return Url put https://yourtenant.b2clogin.com/yourtenant.onmicrosoft.com/oauth2/authresp
@@ -40,10 +49,12 @@ in Return Url put https://yourtenant.b2clogin.com/yourtenant.onmicrosoft.com/oau
 <img alt='Apple' src='/assets/applelogin.png'>
 
 **Creating the client secret**
+
 after creating the key On the Download Your Key page, download the key. It will download as a .p8 (PKCS#8) file - you'll use this to sign your client secret JWT. 
 Apple does not use client id and secrets like other IDPs.it uses signed jwt token.
 The JWT structure is 
-```Json{
+```Json
+{
   "alg": "ES256",
   "kid": "KId",
 }.{
@@ -86,12 +97,14 @@ I have used c# code to generate this jwt token
             string jwt = tokenHandler.WriteToken(token);
 ```
 We need this token while registering the OpenId connect in Azure B2C
-###Apple does not accept more than 6 month token. 
-***We Need to renew this token every 6 month** 
-###I have not added more details in above steps as there are common for apple app registration.
+### Apple does not accept more than 6 month token. 
+**We Need to renew this token every 6 month** 
+
+### I have not added more details in above steps as there are common for apple app registration.
 
 
 **Configure the OpenID connect In Azure AD B2C**
+
 Host the apple Metadata endpoint as below with URL ending /.well-known/openid-configuration
 I have hosted it in blob storage you can host it any where.
 Note this endpoint shall be anonymous.
@@ -116,6 +129,7 @@ Response mode: form_post
 <img alt='Apple' src='/assets/openidconfig.png'>
 
 **Configure a sign In User flow**
+
 For the sign up from User only ask first name and last name in User Attributes.
 <img alt='Apple' src='/assets/user attribute.png'>
 
@@ -125,6 +139,6 @@ In Claim Attributes select the 3 attributes.
 In user signup only ask for First Name and Last Name.
 <img alt='Apple' src='/assets/user flow.png'>
 
-###Note: While login in apple for the first time user has to allow the email id.
+### Note: While login in apple for the first time user has to allow the email id.
 
 {% if page.comments %} {% include disqus.html %} {% endif %}
