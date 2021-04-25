@@ -10,6 +10,6 @@ Its my day to day on hand experience with
  Azure Devops
  .Net Core
  Bot 
-
+Information Security 
  AI and ML
  
