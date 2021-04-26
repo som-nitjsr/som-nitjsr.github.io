@@ -6,15 +6,23 @@ categories: BFF
 ---
 [IETF](https://tools.ietf.org/html/draft-parecki-oauth-browser-based-apps-02#section-6.2) 
 has already recommended Backend for Frontend Security(BFF) for SPA.
-I am big fan of BFF and have implemnted for angular SPA.
+I am big fan of BFF and have implemented for angular SPA.
 BFF has two main point.
-1. Don't Use Implicit Flow (Alredy Depricated in Oauth 2.1)
+1. Don't Use Implicit Flow (Already Deprecated in OAuth 2.1)
 2. Don't store access or id token on browser.   
-I am trying to implemnt the same in  Blazor WASM.
-By defaut WASM template still store security token on browser side. 
-This is what i have done. 
+I am trying to implement the same in  Blazer WASM.
+By default WASM template still store security token in browser side. 
+This is what I have done. 
 <img alt='BFF' src='/assets/BlazorWASMBFF.png'>
 
+It has 3 component.
+**1. WASM :**
+ This is blazer WASM and runs in browser. It will call the api from and will include the cookie in every call to server.
+**2. Host:** This is simple aspnet core app that host the WASM.
+It will also work as Reverse Proxy and will include the user access token in every call going to api. I have also hosted the Identity Server(Authority) in the same app.  
+
+**Note:** You can always use a separate Identity Server instance if you have.  
+**3. API:** This is aspnet core web api and require JWT bearer token  to access the Secure end point.
 
 [Blazer WASM BFF Source code](https://github.com/som-nitjsr/BlazorWASMBFF)
 Special Thanks To
