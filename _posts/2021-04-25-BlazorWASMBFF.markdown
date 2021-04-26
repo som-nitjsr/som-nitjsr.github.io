@@ -16,8 +16,10 @@ This is what I have done.
 <img alt='BFF' src='/assets/BlazorWASMBFF.png'>
 
 It has 3 component.
+
 **1. WASM :**
  This is blazer WASM and runs in browser. It will call the api from and will include the cookie in every call to server.
+ 
 **2. Host:** This is simple aspnet core app that host the WASM.
 It will also work as Reverse Proxy and will include the user access token in every call going to api. I have also hosted the Identity Server(Authority) in the same app.  
 
