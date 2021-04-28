@@ -1,6 +1,9 @@
 ---
 layout: post
+comments: true
+IDENTIFIER: BFF 
 title:  "Blazer WASM Backend for Frontend BFF"
+description: Blazer | BFF | Identity Server | YARP | OAuth 2.1 | OpenId Connect| Security |
 date:   2021-04-25 13:36:37 +0530
 categories: BFF
 ---
