@@ -6,7 +6,7 @@ layout: home
 ---
 Its my day to day on hand experience with
  Azure
- Kubenetes
+ Kubernetes
  Azure Devops
  .Net Core
  Bot 
