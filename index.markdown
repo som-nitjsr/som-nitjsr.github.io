@@ -5,11 +5,14 @@
 layout: home
 ---
 Its my day to day on hand experience with
+ AWS
  Azure
+ GCP
+ CCSP
  Kubernetes
  Azure Devops
  .Net Core
  Bot 
-Information Security 
+ Information Security 
  AI and ML
  

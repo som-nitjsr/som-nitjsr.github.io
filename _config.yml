@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Azure In and Out
+title: Cloud In and Out
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
-  Its All about Azure In and Out. AKS OpenId Connect  .Net Core Oauth Security Azure DevOps  
+  Its All about AWS Azure and GCP  In and Out. AKS OpenId Connect  .Net Core Oauth Security Azure DevOps  
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://som-nitjsr.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: som_nitjsr

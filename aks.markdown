@@ -4,6 +4,6 @@ title: Aks
 permalink: /Aks/
 ---
 
-Will share about Kubenetes
+Will share about Kubernetes
 
 
