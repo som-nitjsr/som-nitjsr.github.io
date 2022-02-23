@@ -28,7 +28,7 @@ twitter_username: som_nitjsr
 github_username:  som-nitjsr
 
 # Build settings
-theme: minima
+theme: architect
 plugins:
   - jekyll-feed
 
