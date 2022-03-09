@@ -4,7 +4,7 @@ comments: true
 IDENTIFIER: AppEngine 
 title:  "Deploying .Net 6.0 App in GCP App Engine"
 description: GCP | AppEngine | .Net6.0 |DotNetCore | Docker 
-date:   2022-03-09 20:36:37 +0530
+date:   2022-03-08 20:36:37 +0530
 categories: GCP
 ---
 GCP provide App Engine as Pass Service for Hosting many framework. It support Stnadard and Flex Mode.
