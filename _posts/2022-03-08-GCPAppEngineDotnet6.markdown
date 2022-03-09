@@ -7,12 +7,14 @@ description: GCP | AppEngine | .Net6.0 |DotNetCore | Docker
 date:   2022-03-08 20:36:37 +0530
 categories: GCP
 ---
-GCP provide App Engine as Pass Service for Hosting many framework. It support Stnadard and Flex Mode.
-As of writing this Blog App Engine Support .Net Core 3.1 In Flex Mode.
-I was also planning to use WAF and TLS termination at my ELB. 
+GCP provide App Engine as Pass Service for Hosting many framework. It support Standard and Flex Mode.
+As of writing this Blog App Engine only Support till .Net Core 3.1 In Flex Mode.
+
 I followed Below steps to host .net 6.0 app in GCP App engine.
 
 **1. Setup the Environment**
+
+Make sure the xxx@cloudbuild.gserviceaccount.com build account has storage access and App engine deployer 
 Open the Cloud Shell In GCP or Install the Gcloud SDK locally. I have performed all the steps in Cloud Shell. 
  Set up the default project 
  ```bash
