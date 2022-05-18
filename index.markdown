@@ -7,10 +7,16 @@ layout: home
 Its my day to day on hand experience with
 
  **AWS**
+
  **Azure**
+
  **GCP**
+
  **Security** 
+
  **Kubernetes**
+
  **Azure Devops**
+ 
  **AI and ML**
  
