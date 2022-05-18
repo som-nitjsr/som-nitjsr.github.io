@@ -5,14 +5,12 @@
 layout: home
 ---
 Its my day to day on hand experience with
- AWS
- Azure
- GCP
- CCSP
- Kubernetes
- Azure Devops
- .Net Core
- Bot 
- Information Security 
- AI and ML
+
+ **AWS**
+ **Azure**
+ **GCP**
+ **Security** 
+ **Kubernetes**
+ **Azure Devops**
+ **AI and ML**
  

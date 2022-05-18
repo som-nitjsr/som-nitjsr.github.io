@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-Somnath Shukla is a Multi Cloud Solution Architect, Certified Cloud Security Professional, Certified Kubernetes Administrator, and life-long learner. He has 15+ years of experience in  Azure,GCP, AWS and Microsoft.NET technologies.
+Somnath Shukla is a Multi Cloud Solution Architect, Certified Cloud Security Professional, Certified Kubernetes Administrator, and life-long learner. He has 16+ years of experience in  Azure,GCP, AWS and Microsoft.NET technologies.
 
 He had completed B.tech(Hons) from NIT Jamshedpur.
 
