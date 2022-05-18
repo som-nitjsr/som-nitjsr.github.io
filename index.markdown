@@ -6,17 +6,7 @@ layout: home
 ---
 Its my day to day on hand experience with
 
- **AWS**
+ **AWS**                    **Azure**                       **GCP**                      **Kubernetes**   
 
- **Azure**
-
- **GCP**
-
- **Security** 
-
- **Kubernetes**
-
- **Azure Devops**
- 
- **AI and ML**
+ **Security**               **Azure Devops**                **AI and ML**
  
