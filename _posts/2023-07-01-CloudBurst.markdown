@@ -7,15 +7,17 @@ description: Private Cloud | Azure Stack HCI |HCI| Azure
 date:   2023-07-01 11:36:37 +0530
 categories: HCI
 ---
-With the rise of Private Cloud there is again the discussion how to utilize/ optimize the Capex in enterprise private cloud. Private Cloud is need of the house based on different requirment specially the data locality and full control over the cloud. Though almost all the Private Cloud Provider support the scale you can start from two node cluster and scale based on your need. But this scale is not going to as instantaneously as in Public Cloud. Off course it require the hardware and that may take some time may be a month. Even though you can plan your capacity but bottom line is it is going to take some time to scale your private cluster. This is one scenario and there are many more apps which only need to scale once in a year e.g. results.
+With the rise of Private Cloud there is again the discussion how to utilize/ optimize the Capex in enterprise private cloud. **Private Cloud** is need of the house based on different requirment specially the data locality and full control over the cloud. Though almost all the Private Cloud Provider support the scale you can start from two node cluster and scale based on your need. But this scale is not going to as instantaneously as in Public Cloud. Off course it require the hardware and that may take some time may be a month. Even though you can plan your capacity but bottom line is it is going to take some time to scale your private cluster. This is one scenario and there are many more apps which only need to scale once in a year e.g. results.
+
 So what is Cloud Burst and how it is going to help?
-Cloud Bursting is a process which will help your workload to run from private and public cloud on demand basis.
+**Cloud Bursting** is a process which will help your workload to run from private and public cloud on demand basis.
 Next step is to identify which workload can be run on public cloud. If your all the work load can be run on public cloud then it means you dont need a private cloud in first place and use the public cloud itself.
+
 I think identifying the work load is most important part in cloud bursting solution design.
 Let say a workload has three component compute, database and supporting services. I think we can move the compute to public cloud and use still access the database and supporting service from on- premise using cloud express.
 One the question is Latency that can be solved using caching and this where application design comes in to the picture.     
  
-<img alt='AWS' src='/assets/demo.png'>
+<img alt='AWS' src='/assets/Demo.png'>
 
 ### Let see how the flow works and what are the component used.
 1. User put xyz.com url in browser
