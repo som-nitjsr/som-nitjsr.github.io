@@ -11,12 +11,14 @@ categories: HCI
 I have had the opportunity to Design/Develop a couple of the biggest(in MW) Private Cloud Data Centers in the country. I am a big believer in Sustainable Development and try to contribute in my capacity. Today I will talk about how I got my passion in my professional life also.
 
 **What is Sustainable Development?**
+
 The [United Nations World Commission on Environment and Development](https://www.un.org/en/academic-impact/sustainability) defines sustainable development as “Development that meets the needs of the present without compromising the ability of future generations to meet their own needs.”
 
 
 **What is sustainability in Private Cloud?**
+
 Sustainability in a private cloud refers to the practice of designing, implementing, and managing a private cloud infrastructure in an environmentally responsible and resource-efficient manner. Ensuring sustainability in a private cloud can help reduce the environmental impact, lower operational costs, and align with corporate social responsibility goals.
-#There are already few considerations for Sustainable Data Center design.
+# There are already few considerations for Sustainable Data Center design.
 
 - Use of Renewable Energy
 - Cooling Efficiency
@@ -47,6 +49,7 @@ Thanks to [4th Generation Intel® Xeon Processor](https://ark.intel.com/content/
 
 These C-states changes have been validated on Telco workload where packet drops are not acceptable. For IT workloads that run over TCP/IP, there is no issue at all.
 Sustainability in a private cloud is not only beneficial for the environment but can also lead to cost savings and improved corporate reputation. It aligns with the broader trend of organizations incorporating sustainability into their business strategies and operations.
+
 **For a Better future of the Next Generations**
 
 {% if page.comments %} {% include disqus.html %} {% endif %}
