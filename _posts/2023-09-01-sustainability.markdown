@@ -7,7 +7,7 @@ description: Private Cloud | Azure Stack HCI |HCI| Azure|Sustainability |Intel
 date:   2023-09-01 11:36:37 +0530
 categories: HCI
 ---
-<img alt='AWS' src='/assets/me-Sustainability.png'>
+<img alt='Sustainability' src='/assets/me-Sustainability.png'>
 I have had the opportunity to Design/Develop a couple of the biggest(in MW) Private Cloud Data Centers in the country. I am a big believer in Sustainable Development and try to contribute in my capacity. Today I will talk about how I got my passion in my professional life also.
 
 **What is Sustainable Development?**
