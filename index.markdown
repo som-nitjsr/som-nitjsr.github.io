@@ -5,6 +5,7 @@
 layout: home
 ---
 Its my day to day on hand experience with
+ **Nutainx**                **Azure Stack HCI**      **VMware VCF VCD**   
 
  **AWS**                    **Azure**                       **GCP**                      **Kubernetes**   
 

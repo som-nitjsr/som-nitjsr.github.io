@@ -7,8 +7,6 @@ description: Multifactor Authentication (MFA)| Enhancing Digital Security|CyberS
 date:   2023-09-10 11:36:37 +0530
 categories: Security
 ---
-<img alt='AWS' src='/assets/me-Sustainability.png'>
-
 In today's interconnected world, the security of our digital identities and data is paramount. As cyber threats continue to evolve and become more sophisticated, relying solely on traditional password-based authentication methods is no longer sufficient. This is where Multifactor Authentication (MFA) steps in, providing an additional layer of security to protect our online accounts and sensitive information. In this blog, we will delve into the concept of MFA, how it works, and its importance in safeguarding our digital lives.
 
 **Understanding Multifactor Authentication**
