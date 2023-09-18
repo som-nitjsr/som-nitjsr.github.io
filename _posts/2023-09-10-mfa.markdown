@@ -73,13 +73,4 @@ MFA is implemnted at IdP level. Now a days most of application uses [OpenID Conn
 
 In a digital landscape where cyber threats are constantly evolving, Multifactor Authentication (MFA) stands as a critical defense mechanism. By requiring users to provide two or more authentication factors from different categories, MFA significantly enhances security, mitigates the risk of password-related breaches, and offers resistance to phishing attacks. It is a fundamental component of modern cybersecurity strategies, protecting not only individual accounts but also the sensitive data and assets of organizations and institutions. As we continue to embrace digital technologies in our daily lives, the adoption of MFA is essential in safeguarding our digital identities and preserving the integrity of our online interactions.
 
-**About Me**
-Somnath Shukla is a Multi Cloud Solution Architect(Public and Private), Certified Cloud Security Professional, Certified Kubernetes Administrator, and life-long learner. He has 17+ years of experience in 
-- Azure
-- Nutanix
-- Azure Stack HCI
-- VMware VCF/VCD
-- GCP
-- AWS 
-
 {% if page.comments %} {% include disqus.html %} {% endif %}
