@@ -1,0 +1,34 @@
+---
+layout: post
+comments: true
+IDENTIFIER: AKS 
+title:  "End to end Encryption with AKS and API Management"
+description: Private Cloud | Azure Stack HCI |HCI| Azure|Sustainability |Intel
+date:   2023-09-01 11:36:37 +0530
+categories: HCI
+---
+I was trying to host micros services in aks behind APIM and wanted to provide end to end encryption. One of the point I was evaluating was Azure AppGateway Ingress Controller( AGIC) vs NGINX. After following this and based on huge workload requirment [AKS Ingress Performance Testing: Nginx vs AppGW (AGIC)](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/aks-ingress-perf-testing-nginx-vs-appgw-agic/ba-p/3706694). I have chosen NGINX as my Ingress Controller.
+
+**What is Sustainable Development?**
+<img alt='aks' src='/assets/me-aks.png'>
+
+**Data Flow for Ingress**
+
+1. A user requests to the application endpoint from the internet.
+2. [Azure Front Door](https://azure.microsoft.com/en-us/products/frontdoor/) receives traffic as HTTPS and presents a PFX certificate previously loaded from Azure Key Vault to the user.
+3. Azure Front Door uses private keys to decrypt traffic (SSL offload), performs web application firewall inspections, and re-encrypts traffic by using public keys (end-to-end encryption).
+4. Azure Front Door applies rules based on the Origin groups and sends traffic to the API Management backend pool over HTTPS.
+5. API Management receives traffic as HTTPS with custom domain PFX certificates. It also validates the Front Door backend IP address using the Global IP filter and X-Azure-FDID header.
+6. IDP provides authentication and applies API Management policies via OAuth and client certificate validation. To receive and verify client certificates over HTTP/2 in API Management, In APIM Negotiated client certificate is enabled on the Custom domains blade in API Management.
+7. API Management sends traffic via HTTPS to an ingress controller for an AKS private cluster.
+8. The AKS ingress controller receives the HTTPS traffic and verifies the PEM server certificate and private key(mTLS).
+9. The ingress controller processes TLS secrets (Kubernetes Secrets) by using cert.pem and key.pem. The ingress controller decrypts traffic by using a private key (offloaded). For enhanced security secret management that's based on requirements, CSI driver integration with AKS is available.
+10. The ingress controller re-encrypts traffic by using private keys and sends traffic over HTTPS to AKS pods.
+11. Inside AKS cluster mTLS is enabled using OSM (Open Service Mesh).
+
+**Data Flow for Egress**
+
+1. When Pod will access any external service, the request will reach to Firewall.
+2. A route table and user-defined routes are used to route the outbound traffic from the private AKS cluster to the Firewall.
+3. Firewall will do the host validation and after nating will send the request to the external service.
+{% if page.comments %} {% include disqus.html %} {% endif %}
