@@ -4,13 +4,12 @@ comments: true
 IDENTIFIER: AKS 
 title:  "End to end Encryption with AKS and API Management"
 description: Private Cloud | Azure Stack HCI |HCI| Azure|Sustainability |Intel
-date:   2023-09-01 11:36:37 +0530
-categories: HCI
+date:   2023-10-12 11:36:37 +0530
+categories: aks
 ---
 I was trying to host micros services in aks behind APIM and wanted to provide end to end encryption. One of the point I was evaluating was Azure AppGateway Ingress Controller( AGIC) vs NGINX. After following this and based on huge workload requirment [AKS Ingress Performance Testing: Nginx vs AppGW (AGIC)](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/aks-ingress-perf-testing-nginx-vs-appgw-agic/ba-p/3706694). I have chosen NGINX as my Ingress Controller.
 
-**What is Sustainable Development?**
-<img alt='aks' src='/assets/me-aks.png'>
+<img alt='aks' src='/assets/me-AKS.png'>
 
 **Data Flow for Ingress**
 
