@@ -7,7 +7,7 @@ description: Radio Equipment Directive (RED) | Generative AI |Red| IoT| Security
 date:   2024-02-01 11:36:37 +0530
 categories: AI
 ---
-<img alt='EU Radio Equipment Directive (RED)' src='/assets/Red.png'>
+<img alt='EU Radio Equipment Directive (RED)' src='/assets/RED.png'>
 
 The **EU Radio Equipment Directive (RED) – especially the 2021 Delegated Regulation on cybersecurity** – significantly reshapes IoT development by making **cybersecurity and privacy compliance mandatory**. These rules, enforceable from **August 2025**, affect all **connected devices** marketed in the EU, demanding changes across **hardware design, firmware, data handling, and conformity assessment**.
 
