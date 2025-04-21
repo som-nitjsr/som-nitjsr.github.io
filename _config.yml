@@ -20,7 +20,8 @@
 
 title: Cloud In and Out
 author:
-   name:  som-nitjsr
+   name: som-nitjsr
+   email: your-email@domain.com
   
  
 description: >- # this means to ignore newlines until "baseurl:"
