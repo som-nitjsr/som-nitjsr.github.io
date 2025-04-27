@@ -98,7 +98,7 @@ For an IoT SoC (e.g.,NRF, NXP, STMicro, Qualcomm):
 - Complex key management
 - Device bricking if Secure Boot keys or policies are misconfigured
 - Performance overhead during boot (mitigated with hardware acceleration)
-## **⚠️ Chipset Verification**
+## **🔒 Chipset Verification** 
 
 Chipset secucity level can be validated at Platform Security Architecture [PSA](https://www.psacertified.org/)
 There are 3 Level of security
