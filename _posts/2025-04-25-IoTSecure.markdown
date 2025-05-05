@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 comments: true
-IDENTIFIER: HCI 
+IDENTIFIER: IoT 
 title:  "Secure Boot in  IoT  Soc"
 description: Secure Boot | Immutable Boot |Red| IoT| Security|SoC
 date:   2025-04-20 11:36:37 +0530
