@@ -41,7 +41,7 @@ Organizations fail to innovate mainly because they over-invest in delivery and u
 ## Practical Challenges
 I believe that in any organization, innovation must be driven from the top, not from the bottom up. Too often, I see leaders primarily focused on cost and timelines. Rarely do I hear a leader say, 'Don't worry about the cost or deadlines—I'm here to support your efforts to innovate and explore new possibilities.
 
-## Visual: How the Gap Worsens Over Time
+## How the Gap Worsens Over Time
 <img alt='Delivery vs Discovery Innovation' src='/assets/DIVDDC.png'>
 
 
