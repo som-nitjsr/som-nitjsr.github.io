@@ -7,7 +7,9 @@ description: CTO | MBA | Innovation
 date:   2025-07-05 11:36:37 +0530
 categories: CTO
 ---
+<p align="center">
 <img alt='PLatform Thinking' src='/assets/PLatformthinking.png'>
+</p>
 
 Most legacy organizations treat digital initiatives as isolated projects: build it, launch it, move on. But in today’s interconnected world, a platform mindset fuels exponential growth and sustainable advantage. Here’s why:
 
