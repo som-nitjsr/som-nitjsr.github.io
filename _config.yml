@@ -28,58 +28,62 @@ url: "https://som-nitjsr.github.io" # the base hostname & protocol for your site
 
 
 # Build settings
-theme: minima
+theme: just-the-docs
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag # add this line to the plugins list if you already have one
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
-# Minima-specific settings (applicable to Minima v3 and above only)
-# -----------------------------------------------------------------
-#
-#  *All described config keys below should be nested under the top-level
-#   `minima` key.*
-#
-minima:
-#   Minima skin selection. Available skins are:
-#     * classic            Default, light color scheme.
-#     * dark               Dark variant of the classic skin.
-#     * auto               Adaptive skin based on the classic and dark skins.
-#     * solarized-light    Light variant of solarized color scheme.
-#     * solarized-dark     Dark variant of solarized color scheme.
-#     * solarized          Adaptive skin for solarized color scheme skins.
-    skin: auto
-#
-#   Specific pages for site navigation.
-#     If you wish to link only specific pages in the site-navigation, use this
-#     and list the `path` property (as represented via Liquid) of the pages in
-#     the order they should be rendered.
-    nav_pages:
-      - about.md
-#
-#   Set to `true` to show excerpts on the homepage.
-#   show_excerpts: false
-#
-#   Minima date format.
-#     The default value is "%b %d, %Y" (e.g. Nov 14, 2023).
-#     Refer to https://shopify.github.io/liquid/filters/date/ for valid values
-#   date_format: "%b-%d-%Y"
-#
-#   Social Media Links.
-#     Renders icons via Font Awesome Free webfonts CDN, based on ordered list of
-#     entries. Valid entry keys:
-#       * title    Tooltip rendered on hovering over icon.
-#       * icon     Font Awesome icon id. `github` corresponds to `fa-github`.
-#       * url      Full URL of social profile.
-#   social_links:
-#     - title: Minima Theme repository at GitHub
-#       icon: github
-#       url: "https://github.com/jekyll/minima"
-#     - title: Jekyll at X (formerly Twitter)
-#       icon: x-twitter
-#       url: "https://x.com/jekyllrb"
-#
-#   Hide syndication feed subscription link.
-#     RSS / Atom feed link is always rendered as the last item of social-links
-#     list. Set below key to `true` to not have the link to feed rendered as
-#     part of social-links list.
-#   hide_site_feed_link: false
+# Just the Docs theme settings
+just_the_docs:
+  # Color scheme supports "light" (default) and "dark"
+  color_scheme: light
+  
+  # Enable or disable the site title and search in the header
+  search_enabled: true
+  search:
+    # Split pages into sections that can be searched individually
+    heading_level: 2
+    previews: 3
+    preview_words_before: 5
+    preview_words_after: 10
+    tokenizer_separator: /[\s/\-]+/
+    rel_url: true
+    button: true
+  
+  # Enable or disable heading anchors
+  heading_anchors: true
+  
+  # Enable or disable the back-to-top link
+  back_to_top: true
+  back_to_top_text: "Back to top"
+  
+  # Enable or disable the link to the repository
+  gh_edit_link: false
+  
+  # Enable or disable the "last modified" date
+  last_edit_timestamp: true
+  
+  # Enable or disable the "last modified" date format
+  last_edit_date_format: "%B %d, %Y"
+  
+  # Enable or disable the footer
+  footer_content: "Copyright &copy; 2025 Digital Leadership Lab. All rights reserved."
+  
+  # Enable or disable the search button
+  search_button: true
+  
+  # Enable or disable the search results
+  search_results: true
+  
+  # Enable or disable the search results preview
+  search_results_preview: true
+  
+  # Enable or disable the search results preview words
+  search_results_preview_words: 10
+  
+  # Enable or disable the search results preview words before
+  search_results_preview_words_before: 5
+  
+  # Enable or disable the search results preview words after
+  search_results_preview_words_after: 10

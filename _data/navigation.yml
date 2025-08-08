@@ -1,0 +1,21 @@
+# Navigation structure for Just the Docs theme
+# This file defines the navigation hierarchy
+
+- title: Home
+  url: /
+  nav_order: 1
+
+- title: About
+  url: /about/
+  nav_order: 2
+
+- title: Blog Posts
+  url: /posts/
+  nav_order: 3
+  children:
+    - title: CTO Leadership
+      url: /posts/#cto-leadership
+    - title: Digital Transformation
+      url: /posts/#digital-transformation
+    - title: Security & Innovation
+      url: /posts/#security-innovation

@@ -1,32 +1,34 @@
 ---
-layout: home
+layout: default
+title: Digital Leadership Lab
+nav_order: 1
 ---
 
-# **Digital Leadership Lab**
+# Digital Leadership Lab
 
-## **Strategic Insights for Modern CTOs**
+## Strategic Insights for Modern CTOs
 
-Welcome to the intersection of technology strategy and executive leadership. Here, we explore how great Technical Leader think beyond code—building platforms, driving transformation, and leading with strategic influence.
-
----
-
-## **Featured Insights**
-
-### **🎯 CTO Leadership**
-- [**5 Soft Skills That Matter More Than Tech at the C-Level**](/2025/08/01/SoftSkillatClevel/) - The leadership muscles that carry strategy forward
-- [**What an MBA Taught Me About Thinking Like a CTO**](/2025/05/01/ArchitectToCTOviaMBA/) - From technical authority to strategic influence
-
-### **🚀 Digital Transformation**
-- [**Why Every Digital Product Should Think Like a Platform**](/2025/07/10/Platformthinking/) - Building scalable, reusable foundations
-- [**Generative AI in the Enterprise**](/2024/02/01/GenerativeAIintheEnterprise/) - Strategic implementation beyond the hype
-
-### **🔒 Security & Innovation**
-- [**IoT Security Strategy**](/2025/04/20/IoTSecurity/) - Securing the connected future
-- [**Securing ELB with WAF**](/2022/01/26-SecuringELBWAF/) - Cloud security best practices
+Welcome to the intersection of technology strategy and executive leadership. Here, we explore how great Technical Leaders think beyond code—building platforms, driving transformation, and leading with strategic influence.
 
 ---
 
-## **Strategic Expertise Areas**
+## Featured Insights
+
+### 🎯 CTO Leadership
+- **[5 Soft Skills That Matter More Than Tech at the C-Level](/posts/2025-08-01-SoftSkillatClevel/)** - The leadership muscles that carry strategy forward
+- **[What an MBA Taught Me About Thinking Like a CTO](/posts/2025-05-01-ArchitectToCTOviaMBA/)** - From technical authority to strategic influence
+
+### 🚀 Digital Transformation
+- **[Why Every Digital Product Should Think Like a Platform](/posts/2025-07-10-Platformthinking/)** - Building scalable, reusable foundations
+- **[Generative AI in the Enterprise](/posts/2024-02-01-GenerativeAIintheEnterprise/)** - Strategic implementation beyond the hype
+
+### 🔒 Security & Innovation
+- **[IoT Security Strategy](/posts/2025-04-20-IoTSecurity/)** - Securing the connected future
+- **[Securing ELB with WAF](/posts/2022-01-26-SecuringELBWAF/)** - Cloud security best practices
+
+---
+
+## Strategic Expertise Areas
 
 | **Leadership** | **Technology** | **Innovation** |
 |---|---|---|
@@ -37,7 +39,7 @@ Welcome to the intersection of technology strategy and executive leadership. Her
 
 ---
 
-## **Why This Matters for CTOs**
+## Why This Matters for CTOs
 
 In today's rapidly evolving technology landscape, technical excellence alone isn't enough. The most successful CTOs understand that:
 
@@ -48,7 +50,7 @@ In today's rapidly evolving technology landscape, technical excellence alone isn
 
 ---
 
-## **Ready to Elevate Your Technology Leadership?**
+## Ready to Elevate Your Technology Leadership?
 
 Whether you're a technical leader aspiring to CTO roles or an experienced executive looking to sharpen your strategic thinking, these insights will help you:
 
