@@ -4,7 +4,7 @@ comments: true
 IDENTIFIER: Leadership 
 title:  "Why Every Digital Product Should Think Like a Platform — Even in Legacy Enterprises"
 description: CTO | MBA | Innovation
-date:   2025-07-05 11:36:37 +0530
+date:   2025-07-10 11:36:37 +0530
 categories: CTO
 ---
 <p align="center">

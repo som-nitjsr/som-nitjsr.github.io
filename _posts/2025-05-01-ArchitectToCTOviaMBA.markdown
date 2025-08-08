@@ -4,7 +4,7 @@ comments: true
 IDENTIFIER: Leadership 
 title:  "What an MBA Taught Me About Thinking Like a CTO — Not Just a Technical Leader"
 description: CTO | MBA | Innovation
-date:   2025-07-05 11:36:37 +0530
+date:   2025-05-01 11:36:37 +0530
 categories: CTO
 ---
 <img alt='CTO' src='/assets/CTO.png'>

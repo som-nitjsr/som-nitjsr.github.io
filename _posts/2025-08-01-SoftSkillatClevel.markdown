@@ -4,7 +4,7 @@ comments: true
 IDENTIFIER: Leadership 
 title:  "5 Soft Skills That Matter More Than Tech at the C-Level"
 description: CTO | MBA | Innovation
-date:   2025-07-05 11:36:37 +0530
+date:   2025-08-01 11:36:37 +0530
 categories: CTO
 ---
 ![Soft Skills](/assets/softskill.png)
