@@ -21,6 +21,11 @@ The leadership muscles that carry strategy forward. Essential soft skills that s
 
 From technical authority to strategic influence. How business education transforms technical leadership.
 
+### [Delivery vs Discovery Skills](/2025/05/01/DeliveryvsDiscoverySkills/)
+*May 1, 2025*
+
+Balancing execution and innovation in technology leadership.
+
 ## Digital Transformation
 
 ### [Why Every Digital Product Should Think Like a Platform](/2025/07/10/Platformthinking/)
@@ -40,17 +45,20 @@ Strategic implementation beyond the hype. Practical approaches to enterprise AI 
 
 Securing the connected future. Comprehensive IoT security strategies for enterprise environments.
 
+### [IoT Security Implementation](/2025/04/25/IoTSecure/)
+*April 25, 2025*
+
+Practical IoT security implementation strategies and best practices.
+
+### [IoT Strategy Framework](/2025/04/25/IoTStategy/)
+*April 25, 2025*
+
+Strategic framework for IoT implementation and governance.
+
 ### [Securing ELB with WAF](/2022/01/26/SecuringELBWAF/)
 *January 26, 2022*
 
 Cloud security best practices. Implementing Web Application Firewall for Elastic Load Balancer protection.
-
-## Platform Thinking
-
-### [Platform Thinking: The Secret Weapon](/2025/07/10/Platformthinking/)
-*July 10, 2025*
-
-How platform thinking creates exponential value and sustainable competitive advantage.
 
 ## Cloud & Architecture
 
@@ -64,17 +72,37 @@ Azure Kubernetes Service and API Management integration strategies.
 
 Modern application deployment on Google Cloud Platform.
 
-## Emerging Technologies
-
 ### [Cloud Burst: Scaling Strategies](/2023/07/01/CloudBurst/)
 *July 1, 2023*
 
 Advanced cloud scaling and bursting strategies for dynamic workloads.
 
+### [Hybrid Cloud with .NET Framework and AKS](/2020/02/03/dotNetFramework-aks-Hybrid/)
+*February 3, 2020*
+
+Hybrid cloud strategies combining .NET Framework with Azure Kubernetes Service.
+
+## Emerging Technologies
+
 ### [Sustainability in Technology](/2023/09/01/sustainability/)
 *September 1, 2023*
 
 Green technology practices and sustainable digital transformation.
+
+### [Apple Login with Azure B2C](/2020/12/24/AppleLoginWithAzureB2C/)
+*December 24, 2020*
+
+Integrating Apple Sign-In with Azure B2C for modern authentication.
+
+### [Blazor WASM with BFF Pattern](/2021/04/25-BlazorWASMBFF/)
+*April 25, 2021*
+
+Backend for Frontend pattern implementation with Blazor WebAssembly.
+
+### [Service Endpoint Security](/2019/11/18/serviceendpoint/)
+*November 18, 2019*
+
+Securing service endpoints in modern applications.
 
 ---
 

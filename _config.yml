@@ -35,6 +35,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Permalink structure for blog posts
+permalink: /:year/:month/:day/:title/
+
 # Just the Docs theme settings
 just_the_docs:
   # Color scheme supports "light" (default) and "dark"

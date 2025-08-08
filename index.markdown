@@ -59,7 +59,7 @@ Whether you're a technical leader aspiring to CTO roles or an experienced execut
 - **Drive transformation** that creates lasting business value
 - **Navigate emerging technologies** with strategic clarity
 
-**[Explore All Insights →](/blog/)** | **[Connect for Strategic Discussions →](/about/)**
+**[Explore All Insights →](/blog)** | **[Connect for Strategic Discussions →](/about/)**
 
 ---
 
