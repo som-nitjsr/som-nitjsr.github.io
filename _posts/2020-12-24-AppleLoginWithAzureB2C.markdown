@@ -141,4 +141,4 @@ In user signup only ask for First Name and Last Name.
 
 ### Note: While login in apple for the first time user has to allow the email id.
 
-{% if page.comments %} {% include disqus.html %} {% endif %}
+

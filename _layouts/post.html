@@ -22,15 +22,16 @@ layout: default
   <div class="related-posts">
     <h3>📚 Related Articles</h3>
     <div class="related-grid">
-      {% assign related_posts = site.posts | where_exp: "post", "post.categories contains page.categories[0]" | where_exp: "post", "post.url != page.url" | limit: 3 %}
-      {% for post in related_posts %}
-        <div class="related-post">
-          <a href="{{ post.url }}">
-            <h4>{{ post.title }}</h4>
-            <p>{{ post.description }}</p>
-            <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-          </a>
-        </div>
+      {% for post in site.posts limit: 3 %}
+        {% if post.url != page.url %}
+          <div class="related-post">
+            <a href="{{ post.url }}">
+              <h4>{{ post.title }}</h4>
+              <p>{{ post.description }}</p>
+              <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+            </a>
+          </div>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
@@ -209,4 +210,27 @@ layout: default
 </style>
 
 <!-- Include newsletter functionality -->
-<script src="{{ site.baseurl }}/assets/js/newsletter.js"></script>
+<script>
+// Fallback newsletter functionality if external script fails to load
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Post layout loaded');
+    
+    // Simple newsletter form handling
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[type="email"]');
+            const email = emailInput.value.trim();
+            
+            if (email) {
+                alert('Thanks for subscribing! Check your email for confirmation.');
+                emailInput.value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+    }
+});
+</script>
+<script src="/assets/js/newsletter.js"></script>

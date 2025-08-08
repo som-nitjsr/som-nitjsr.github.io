@@ -45,4 +45,4 @@ Validate your setup by sending the request to Cloud Front and ELB. While  Cloud 
 I wil see how i can automate this with Terraform/ CloudFormation.  
 
 
-{% if page.comments %} {% include disqus.html %} {% endif %}
+

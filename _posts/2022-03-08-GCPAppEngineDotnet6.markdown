@@ -88,4 +88,4 @@ gcloud app deploy --version v0
 ```
 
 Will add some troubleshooting steps also......
-{% if page.comments %} {% include disqus.html %} {% endif %}
+

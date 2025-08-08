@@ -1,4 +1,6 @@
 // Newsletter signup functionality
+console.log('Newsletter script loaded successfully');
+
 document.addEventListener('DOMContentLoaded', function() {
     const newsletterForm = document.querySelector('.newsletter-form');
     
