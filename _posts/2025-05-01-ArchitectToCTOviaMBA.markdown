@@ -86,4 +86,4 @@ You’ll not only ship better solutions—you’ll **shape the future of the com
 
 ---
 
-{% if page.comments %} {% include disqus.html %} {% endif %}
+
