@@ -94,7 +94,7 @@ Green technology practices and sustainable digital transformation.
 
 Integrating Apple Sign-In with Azure B2C for modern authentication.
 
-### [Blazor WASM with BFF Pattern](/2021/04/25-BlazorWASMBFF/)
+### [Blazor WASM with BFF Pattern](/2021/04/25/BlazorWASMBFF/)
 *April 25, 2021*
 
 Backend for Frontend pattern implementation with Blazor WebAssembly.
