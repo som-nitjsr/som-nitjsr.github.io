@@ -15,16 +15,16 @@ Welcome to the intersection of technology strategy and executive leadership. Her
 ## Featured Insights
 
 ### 🎯 CTO Leadership
-- **[5 Soft Skills That Matter More Than Tech at the C-Level](/posts/2025-08-01-SoftSkillatClevel/)** - The leadership muscles that carry strategy forward
-- **[What an MBA Taught Me About Thinking Like a CTO](/posts/2025-05-01-ArchitectToCTOviaMBA/)** - From technical authority to strategic influence
+- **[5 Soft Skills That Matter More Than Tech at the C-Level](/2025/08/01/SoftSkillatClevel/)** - The leadership muscles that carry strategy forward
+- **[What an MBA Taught Me About Thinking Like a CTO](/2025/05/01/ArchitectToCTOviaMBA/)** - From technical authority to strategic influence
 
 ### 🚀 Digital Transformation
-- **[Why Every Digital Product Should Think Like a Platform](/posts/2025-07-10-Platformthinking/)** - Building scalable, reusable foundations
-- **[Generative AI in the Enterprise](/posts/2024-02-01-GenerativeAIintheEnterprise/)** - Strategic implementation beyond the hype
+- **[Why Every Digital Product Should Think Like a Platform](/2025/07/10/Platformthinking/)** - Building scalable, reusable foundations
+- **[Generative AI in the Enterprise](/2024/02/01/GenerativeAIintheEnterprise/)** - Strategic implementation beyond the hype
 
 ### 🔒 Security & Innovation
-- **[IoT Security Strategy](/posts/2025-04-20-IoTSecurity/)** - Securing the connected future
-- **[Securing ELB with WAF](/posts/2022-01-26-SecuringELBWAF/)** - Cloud security best practices
+- **[IoT Security Strategy](/2025/04/20/IoTSecurity/)** - Securing the connected future
+- **[Securing ELB with WAF](/2022/01/26/SecuringELBWAF/)** - Cloud security best practices
 
 ---
 
@@ -59,7 +59,7 @@ Whether you're a technical leader aspiring to CTO roles or an experienced execut
 - **Drive transformation** that creates lasting business value
 - **Navigate emerging technologies** with strategic clarity
 
-**[Explore All Insights →](/posts/)** | **[Connect for Strategic Discussions →](/about/)**
+**[Explore All Insights →](/blog/)** | **[Connect for Strategic Discussions →](/about/)**
 
 ---
 
