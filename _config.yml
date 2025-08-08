@@ -18,11 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Cloud In and Out
+title: Digital Leadership Lab
   
  
 description: >- # this means to ignore newlines until "baseurl:"
-  Its All about IoT, AI, Cloud and Security.   
+  Strategic insights for CTOs and technology leaders. From code to strategy, platform thinking to digital transformation. Practical leadership wisdom for the modern tech executive.   
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://som-nitjsr.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
