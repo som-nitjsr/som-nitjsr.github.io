@@ -55,10 +55,3 @@ Amazon invests heavily in delivery (supply chain) and discovery (AWS, Alexa, Pro
 Apple relentlessly executes delivery (iPhone upgrades) while pioneering discovery (Wearables, AR/VR).
 
 
-📚 Reference:
-
-Christensen, C. M. The Innovator’s Dilemma
-
-
-
-{% if page.comments %} {% include disqus.html %} {% endif %}

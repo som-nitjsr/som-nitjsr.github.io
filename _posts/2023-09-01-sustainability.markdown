@@ -52,4 +52,4 @@ Sustainability in a private cloud is not only beneficial for the environment but
 
 **For a Better future of the Next Generations**
 
-{% if page.comments %} {% include disqus.html %} {% endif %}
+

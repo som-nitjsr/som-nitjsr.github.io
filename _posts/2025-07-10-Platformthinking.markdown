@@ -43,4 +43,4 @@ If you’re leading digital transformations in a legacy enterprise, ask yourself
 
 “How can we turn our digital initiatives into enduring platforms—rather than one‑off projects?”
 
-{% if page.comments %} {% include disqus.html %} {% endif %}
+

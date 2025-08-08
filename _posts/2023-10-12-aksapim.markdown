@@ -30,4 +30,4 @@ I was trying to host micros services in aks behind APIM and wanted to provide en
 1. When Pod will access any external service, the request will reach to Firewall.
 2. A route table and user-defined routes are used to route the outbound traffic from the private AKS cluster to the Firewall.
 3. Firewall will do the host validation and after nating will send the request to the external service.
-{% if page.comments %} {% include disqus.html %} {% endif %}
+

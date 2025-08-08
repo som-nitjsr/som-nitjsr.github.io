@@ -74,4 +74,4 @@ scalset.Update (patch);
 ```
 
 
-{% if page.comments %} {% include disqus.html %} {% endif %}
+

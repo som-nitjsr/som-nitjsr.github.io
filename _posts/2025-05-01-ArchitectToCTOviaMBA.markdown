@@ -84,6 +84,6 @@ It taught me to lead *with* technology—but not *through* technology alone.
 If you're a technical leader aiming for executive roles, invest in learning how **business thinks**.
 You’ll not only ship better solutions—you’ll **shape the future of the company.**
 
----
+
 
 

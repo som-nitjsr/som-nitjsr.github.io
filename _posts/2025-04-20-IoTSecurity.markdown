@@ -85,6 +85,6 @@ Originally aimed to ensure safety, electromagnetic compatibility, and efficient 
 
  **EU Guidance**  [RED Compliance Guidance – EU Commission](https://digital-strategy.ec.europa.eu/en/policies/red-cybersecurity)
 
----
 
-{% if page.comments %} {% include disqus.html %} {% endif %}
+
+

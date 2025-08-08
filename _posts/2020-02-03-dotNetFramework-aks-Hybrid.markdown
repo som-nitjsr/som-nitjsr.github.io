@@ -297,5 +297,5 @@ Again Sql DACPAC was at rescue.
 3. Created Release for different environment. 
 
 Will add more detail for each steps.
-{% if page.comments %} {% include disqus.html %} {% endif %}
+
 

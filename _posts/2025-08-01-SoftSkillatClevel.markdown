@@ -63,4 +63,4 @@ When things go wrong—and they will—teams don’t just need solutions. They n
 While technical fluency earns you the seat at the table, it’s these five soft skills that ensure you’ll lead, influence, and inspire from that seat.
 
 Let’s stop calling them soft. These are the muscles that carry strategy, culture, and execution forward—especially at the top.
-{% if page.comments %} {% include disqus.html %} {% endif %}
+

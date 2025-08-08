@@ -109,4 +109,3 @@ There are 3 Level of security
 # For RED compliance, Level 3 is recommended.	
 
 
-{% if page.comments %} {% include disqus.html %} {% endif %}
