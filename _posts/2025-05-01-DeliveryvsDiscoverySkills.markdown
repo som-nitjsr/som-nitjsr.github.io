@@ -4,7 +4,7 @@ comments: true
 IDENTIFIER: Leadership 
 title:  "Delivery vs Discovery: The Hidden Skills Gap Killing Corporate Innovation"
 description: Delivery | Discovery | Innovation
-date:   2025-05-05 11:36:37 +0530
+date:   2025-05-01 11:36:37 +0530
 categories: Innovation
 ---
 <img alt='Delivery vs Discovery Innovation' src='/assets/Delivery vs Discovery Innovation.png'>

@@ -4,7 +4,7 @@ comments: true
 IDENTIFIER: IoT 
 title:  "Secure Boot in  IoT  Soc"
 description: Secure Boot | Immutable Boot |Red| IoT| Security|SoC
-date:   2025-04-20 11:36:37 +0530
+date:   2025-04-25 11:36:37 +0530
 categories: IoT
 ---
 <img alt='Secure Boot' src='/assets/SecureBoot.png'>

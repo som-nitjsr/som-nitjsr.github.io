@@ -4,7 +4,7 @@ comments: true
 IDENTIFIER: IoT 
 title:  "Impact of Radio Equipment Directive (RED) on IoT  Security and the way forward"
 description: Radio Equipment Directive (RED) | Generative AI |Red| IoT| Security
-date:   2025-04-25 11:36:37 +0530
+date:   2025-04-20 11:36:37 +0530
 categories: IoT
 ---
 <img alt='EU Radio Equipment Directive (RED)' src='/assets/RED.png'>
