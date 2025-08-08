@@ -2,12 +2,211 @@
 layout: default
 ---
 
-{{ content }}
+<article class="post-content">
+  <!-- Reading time and social sharing -->
+  <div class="post-meta">
+    <span class="reading-time">
+      📖 {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read
+    </span>
+    <div class="social-share">
+      <span>Share:</span>
+      <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener">🐦 Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener">💼 LinkedIn</a>
+      <a href="mailto:?subject={{ page.title | url_encode }}&body=Check out this article: {{ site.url }}{{ page.url }}" target="_blank" rel="noopener">📧 Email</a>
+    </div>
+  </div>
+
+  {{ content }}
+
+  <!-- Related posts section -->
+  <div class="related-posts">
+    <h3>📚 Related Articles</h3>
+    <div class="related-grid">
+      {% assign related_posts = site.posts | where_exp: "post", "post.categories contains page.categories[0]" | where_exp: "post", "post.url != page.url" | limit: 3 %}
+      {% for post in related_posts %}
+        <div class="related-post">
+          <a href="{{ post.url }}">
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.description }}</p>
+            <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Newsletter signup -->
+  <div class="newsletter-signup">
+    <h3>💡 Stay Updated</h3>
+    <p>Get the latest insights on digital leadership and CTO strategies delivered to your inbox.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</article>
 
 {% if page.comments %}
 <div class="comments-section">
   <hr>
-  <h3>Comments</h3>
+  <h3>💬 Join the Conversation</h3>
+  <p>What soft skills have been most valuable in your leadership journey? Share your thoughts below.</p>
   {% include disqus.html %}
 </div>
 {% endif %}
+
+<style>
+.post-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.reading-time {
+  color: #6a737d;
+  font-weight: 500;
+}
+
+.social-share {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-share a {
+  color: #0366d6;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.social-share a:hover {
+  background-color: #e1f5fe;
+}
+
+.related-posts {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.related-posts h3 {
+  margin-bottom: 1.5rem;
+  color: #24292e;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.related-post {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.related-post:hover {
+  transform: translateY(-2px);
+}
+
+.related-post a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.related-post h4 {
+  margin: 0 0 0.5rem 0;
+  color: #0366d6;
+  font-size: 1.1rem;
+}
+
+.related-post p {
+  margin: 0 0 1rem 0;
+  color: #6a737d;
+  font-size: 0.9rem;
+}
+
+.post-date {
+  color: #6a737d;
+  font-size: 0.8rem;
+}
+
+.newsletter-signup {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.newsletter-signup h3 {
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 1.5rem auto 0;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  padding: 0.75rem 1.5rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.newsletter-form button:hover {
+  background: #218838;
+}
+
+@media (max-width: 768px) {
+  .post-meta {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<!-- Include newsletter functionality -->
+<script src="{{ site.baseurl }}/assets/js/newsletter.js"></script>
