@@ -11,6 +11,11 @@ Strategic insights and thought leadership content for CTOs and technology leader
 
 ## CTO Leadership
 
+### [How Network Effects Need to Evolve: From Direct & Indirect to Data-Driven Network Effects in Today's World](/2025/08/09/NetworkEffectsEvolution/)
+*August 9, 2025*
+
+Building competitive advantage through data intelligence. How modern organizations must evolve beyond traditional network effects to create intelligence moats.
+
 ### [5 Soft Skills That Matter More Than Tech at the C-Level](/2025/08/01/SoftSkillatClevel/)
 *August 1, 2025*
 
