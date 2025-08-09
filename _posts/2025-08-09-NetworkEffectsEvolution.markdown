@@ -7,16 +7,12 @@ description: CTO | Network Effects | Digital Strategy
 date:   2025-08-09 11:36:37 +0530
 categories: CTO
 ---
-<p align="center">
-<img alt='Network Effects Evolution' src='/assets/networkeffects.png'>
-</p>
-
-Traditional network effects powered the last generation of tech giants. But in today's data-rich, AI-driven world, understanding only direct and indirect network effects isn't enough for management teams.
+Traditional network effects powered the last generation of tech giants. But in today's data-rich, Gen AI-driven world, understanding only direct and indirect network effects isn't enough for management teams.
 
 We need to evolve our thinking to include **Data Network Effects**—where value compounds through data intelligence, not just user connections.
 
 Here's why this shift matters for every digital leader:
-
+![Network Effects Evolution](/assets/networkeffects.png)
 ---
 
 ## The Traditional Network Effects Framework
