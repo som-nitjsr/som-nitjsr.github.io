@@ -31,8 +31,8 @@ From technical authority to strategic influence. How business education transfor
 
 Balancing execution and innovation in technology leadership.
 
-### [Model Context Protocol (MCP): The Foundation for AI Agent Ecosystems and the Way Forward](/2025/01/15/ModelContextProtocol/)
-*January 15, 2025*
+### [Model Context Protocol (MCP): The Foundation for AI Agent Ecosystems and the Way Forward](/2025/08/22/ModelContextProtocol/)
+*August 22, 2025*
 
 A new standard for AI agent collaboration and enterprise transformation.
 
