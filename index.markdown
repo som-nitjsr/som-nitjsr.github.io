@@ -24,8 +24,7 @@ Welcome to the intersection of technology strategy and executive leadership. Her
 ### 🚀 Digital Transformation
 - **[Why Every Digital Product Should Think Like a Platform](/2025/07/10/Platformthinking/)** - Building scalable, reusable foundations
 - **[Generative AI in the Enterprise](/2024/02/01/GenerativeAIintheEnterprise/)** - Strategic implementation beyond the hype
--***[Model Context Protocol (MCP)](/2025/08/22/ModelContextProtocol/)** - The Foundation for AI Agent Ecosystems and the Way Forward
-*August 22, 2025*
+
 ### 🔒 Security & Innovation
 - **[IoT Security Strategy](/2025/04/20/IoTSecurity/)** - Securing the connected future
 - **[Securing ELB with WAF](/2022/01/26/SecuringELBWAF/)** - Cloud security best practices

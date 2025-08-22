@@ -18,6 +18,7 @@ Here's why MCP matters and how it will reshape enterprise AI strategy:
 
 ## What is Model Context Protocol (MCP)?
 ![Model Context Protocol](/assets/MCP.png)
+
 **MCP is a standardized protocol that enables AI models to communicate with external tools, data sources, and other AI systems through a common interface.**
 
 Think of it as the **universal translator** for AI systems—allowing different models, tools, and data sources to understand each other regardless of their underlying architecture.
