@@ -9,7 +9,9 @@ categories: Strategy
 ---
 
 For decades, business leaders relied on tried-and-tested strategy frameworks to gain an edge. Michael Porter’s ideas of Cost Leadership, Differentiation, and the Productivity Frontier dominated boardroom discussions and MBA classrooms alike.
+
 I can’t recall an MBA class that didn’t include a discussion on Porter’s Five Forces. 
+
 These strategies thrived in a world where competition moved in predictable cycles, technology adoption was slower, and market moats could last for decades.
 
 But today, we are in a radically different environment. The rise of Generative AI (GenAI) and data-driven ecosystems has rewritten the rules of the game. What once worked as a sustainable advantage now feels like table stakes.
