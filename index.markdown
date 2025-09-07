@@ -15,6 +15,8 @@ Welcome to the intersection of technology strategy and executive leadership. Her
 ## Featured Insights
 
 ### 🎯 CTO Leadership
+- **[Why Traditional Strategies Are No Longer Enough in the Age of GenAI and Data](/2025/09/07/TraditionalStrategiesGenAI/)** - Building competitive advantage through data intelligence
+
 - **[How Network Effects Need to Evolve: From Direct & Indirect to Data-Driven Network Effects](/2025/08/09/NetworkEffectsEvolution/)** - Building competitive advantage through data intelligence
 - **[5 Soft Skills That Matter More Than Tech at the C-Level](/2025/08/01/SoftSkillatClevel/)** - The leadership muscles that carry strategy forward
 - **[What an MBA Taught Me About Thinking Like a CTO](/2025/05/01/ArchitectToCTOviaMBA/)** - From technical authority to strategic influence

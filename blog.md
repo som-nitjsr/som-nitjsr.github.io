@@ -11,6 +11,11 @@ Strategic insights and thought leadership content for CTOs and technology leader
 
 ## CTO Leadership
 
+### [Why Traditional Strategies Are No Longer Enough in the Age of GenAI and Data](/2025/09/07/TraditionalStrategiesGenAI/)
+*September 7, 2025*
+
+Building competitive advantage through data intelligence. How modern organizations must evolve beyond traditional Strategies.
+
 ### [How Network Effects Need to Evolve: From Direct & Indirect to Data-Driven Network Effects in Today's World](/2025/08/09/NetworkEffectsEvolution/)
 *August 9, 2025*
 
