@@ -11,6 +11,11 @@ Strategic insights and thought leadership content for CTOs and technology leader
 
 ## CTO Leadership
 
+### [The Future of Intelligent Systems Lies at the Edge—Here's Why It Matters Now](/2025/09/21/EdgeIntelligentSystems/)
+*September 21, 2025*
+
+Why edge intelligence is becoming the defining characteristic of next-generation systems.
+
 ### [Why Traditional Strategies Are No Longer Enough in the Age of GenAI and Data](/2025/09/07/TraditionalStrategiesGenAI/)
 *September 7, 2025*
 
