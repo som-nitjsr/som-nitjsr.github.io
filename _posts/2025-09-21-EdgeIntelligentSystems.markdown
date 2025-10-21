@@ -220,7 +220,6 @@ Think of it as moving the brain closer to the hands—where decisions happen ins
 
 Organizations that master edge intelligence will create **three layers of competitive advantage:**
 
-![Edge Intelligence Competitive Advantage](/assets/edgeadvantage.md)
 
 ### **Layer 1: Operational Excellence**
 - **Real-Time Responsiveness:** Instant decision-making and action execution
