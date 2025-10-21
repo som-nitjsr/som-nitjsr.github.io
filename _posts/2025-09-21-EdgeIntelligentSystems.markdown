@@ -313,7 +313,7 @@ Organizations that master edge intelligence will create **three layers of compet
 2. **Success Metrics:** Define clear KPIs and measurement frameworks for edge initiatives
 3. **Change Management:** Prepare organization for edge-driven transformation
 4. **Risk Mitigation:** Establish contingency plans and risk management strategies
-![Edge Intelligence Competitive Advantage](assets/edgeadvantage.md)
+
 ---
 
 ## The Bottom Line
