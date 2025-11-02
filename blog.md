@@ -104,6 +104,11 @@ Hybrid cloud strategies combining .NET Framework with Azure Kubernetes Service.
 
 ## Emerging Technologies
 
+### [How Cloud and IoT Can Help Meet ESG Goals in Industrial Sectors](/2025/11/02/How-cloud-and-IoT-can-help-meet-ESG-goals-in-industrial-sectors/)
+*November 2, 2025*
+
+Driving sustainability with technology. How industrial sectors can leverage IoT and Cloud to meet Environmental, Social, and Governance goals.
+
 ### [Sustainability in Technology](/2023/09/01/sustainability/)
 *September 1, 2023*
 

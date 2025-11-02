@@ -31,6 +31,9 @@ Welcome to the intersection of technology strategy and executive leadership. Her
 - **[IoT Security Strategy](/2025/04/20/IoTSecurity/)** - Securing the connected future
 - **[Securing ELB with WAF](/2022/01/26/SecuringELBWAF/)** - Cloud security best practices
 
+### 🌳 Sustainability
+- **[How Cloud and IoT Can Help Meet ESG Goals in Industrial Sectors](/2025/11/02/How-cloud-and-IoT-can-help-meet-ESG-goals-in-industrial-sectors/)** - Driving sustainability with technology
+
 ---
 
 ## Strategic Expertise Areas
