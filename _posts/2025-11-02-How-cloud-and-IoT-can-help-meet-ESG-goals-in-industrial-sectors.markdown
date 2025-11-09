@@ -36,7 +36,9 @@ Together, they create a powerful feedback loop:
 3.  **Cloud-based platforms** analyze the data to identify trends, predict issues, and recommend optimizations.
 4.  These insights are then used to make smarter, more sustainable decisions back in the physical world.
 
-![How Cloud and IoT help meet ESG goals](/assets/esg.png)
+<div style="text-align: center">
+    <img src="/assets/esg.png" alt="How Cloud and IoT help meet ESG goals" />
+</div>
 ## Meeting Environmental Goals with IoT and Cloud
 
 The environmental aspect of ESG is where the impact of IoT and the Cloud is most visible.
