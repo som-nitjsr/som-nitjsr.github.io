@@ -48,6 +48,11 @@ A new standard for AI agent collaboration and enterprise transformation.
 
 ## Digital Transformation
 
+### [Can GenAI Transform Field Service or Predictive Maintenance? Here's What We're Learning](/2025/11/21/Can-GenAI-transform-field-service-or-predictive-maintenance/)
+*November 21, 2025*
+
+Transforming industrial maintenance with Generative AI. How GenAI is revolutionizing field service operations and predictive maintenance strategies.
+
 ### [Why Every Digital Product Should Think Like a Platform](/2025/07/10/Platformthinking/)
 *July 10, 2025*
 

@@ -24,6 +24,7 @@ Welcome to the intersection of technology strategy and executive leadership. Her
 
 
 ### 🚀 Digital Transformation
+- **[Can GenAI Transform Field Service or Predictive Maintenance? Here's What We're Learning](/2025/11/21/Can-GenAI-transform-field-service-or-predictive-maintenance/)** - Transforming industrial maintenance with Generative AI
 - **[Why Every Digital Product Should Think Like a Platform](/2025/07/10/Platformthinking/)** - Building scalable, reusable foundations
 - **[Generative AI in the Enterprise](/2024/02/01/GenerativeAIintheEnterprise/)** - Strategic implementation beyond the hype
 
