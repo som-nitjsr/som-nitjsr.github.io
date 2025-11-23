@@ -26,7 +26,9 @@ Before we explore how GenAI can transform these areas, let's quickly clarify wha
 Both areas generate massive amounts of data and require sophisticated decision-making, making them prime candidates for AI transformation.
 
 ---
-
+<div style="text-align: center">
+    <img src="/assets/PredGenAI.png" alt="Can GenAI Transform Field Service or Predictive Maintenance" />
+</div>
 ## The GenAI Opportunity
 
 Generative AI brings unique capabilities to the table: it can understand natural language, generate human-like responses, learn from vast amounts of unstructured data, and assist with complex problem-solving. These capabilities align perfectly with the challenges faced in field service and predictive maintenance.
