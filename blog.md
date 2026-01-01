@@ -11,6 +11,11 @@ Strategic insights and thought leadership content for CTOs and technology leader
 
 ## CTO Leadership
 
+### [Speed vs Correctness: The Invisible Tax of Delayed Decisions](/2026/01/01/SpeedVsCorrectness/)
+*January 1, 2026*
+
+The invisible tax of delayed decisions.
+
 ### [The Future of Intelligent Systems Lies at the Edge—Here's Why It Matters Now](/2025/09/21/EdgeIntelligentSystems/)
 *September 21, 2025*
 

@@ -15,6 +15,7 @@ Welcome to the intersection of technology strategy and executive leadership. Her
 ## Featured Insights
 
 ### 🎯 CTO Leadership
+- **[Speed vs Correctness: The Invisible Tax of Delayed Decisions](/2026/01/01/SpeedVsCorrectness/)** - The invisible tax of delayed decisions
 - **[The Future of Intelligent Systems Lies at the Edge—Here's Why It Matters Now](/2025/09/21/EdgeIntelligentSystems/)** - Why edge intelligence is becoming the defining characteristic of next-generation systems.
 - **[Why Traditional Strategies Are No Longer Enough in the Age of GenAI and Data](/2025/09/07/TraditionalStrategiesGenAI/)** - Building competitive advantage through data intelligence
 - **[How Network Effects Need to Evolve: From Direct & Indirect to Data-Driven Network Effects](/2025/08/09/NetworkEffectsEvolution/)** - Building competitive advantage through data intelligence
