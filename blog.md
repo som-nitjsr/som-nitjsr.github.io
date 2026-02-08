@@ -11,6 +11,11 @@ Strategic insights and thought leadership content for CTOs and technology leader
 
 ## CTO Leadership
 
+### [Anthropic 'Coworker' vs Microsoft Copilot: How one reframed the problem—and reached the destination faster](/2026/02/07/AnthropicCoworker-vs-MicrosoftCopilot/)
+*February 7, 2026*
+
+Where AI is integrated in the stack matters more than model quality.
+
 ### [Speed vs Correctness: The Invisible Tax of Delayed Decisions](/2026/01/01/SpeedVsCorrectness/)
 *January 1, 2026*
 

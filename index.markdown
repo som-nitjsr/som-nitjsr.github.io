@@ -15,6 +15,7 @@ Welcome to the intersection of technology strategy and executive leadership. Her
 ## Featured Insights
 
 ### 🎯 CTO Leadership
+- **[Anthropic 'Coworker' vs Microsoft Copilot: How one reframed the problem—and reached the destination faster](/2026/02/07/AnthropicCoworker-vs-MicrosoftCopilot/)** - Where AI is integrated in the stack matters more than model quality
 - **[Speed vs Correctness: The Invisible Tax of Delayed Decisions](/2026/01/01/SpeedVsCorrectness/)** - The invisible tax of delayed decisions
 - **[The Future of Intelligent Systems Lies at the Edge—Here's Why It Matters Now](/2025/09/21/EdgeIntelligentSystems/)** - Why edge intelligence is becoming the defining characteristic of next-generation systems.
 - **[Why Traditional Strategies Are No Longer Enough in the Age of GenAI and Data](/2025/09/07/TraditionalStrategiesGenAI/)** - Building competitive advantage through data intelligence
