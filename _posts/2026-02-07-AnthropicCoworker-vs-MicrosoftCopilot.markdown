@@ -14,7 +14,9 @@ categories: GenAI
 * This is a classic platform vs. paradigm shift story.
 
 ---
-
+<div style="text-align: center">
+    <img src="/assets/coworkervscopilot.png" alt="Coworer vs copilot" />
+</div>
 
 ## The original Microsoft ambition (long before GenAI hype)
 
@@ -192,5 +194,6 @@ Anthropic simply **named it clearly** and started at the right layer.
 
 The next wave won’t be about *which model is smarter*—
 It’ll be about **who chooses the right abstraction for the job**.
+
 
 
