@@ -1,48 +1,70 @@
 ---
 layout: post
 comments: true
-IDENTIFIER: ELB 
-title:  "Securing ELB Behind Cloud Front "
-description: AWS | ELB | WAF | CloudFront | TLS |
+IDENTIFIER: ELB
+title: "Secure an ALB Behind CloudFront: WAF + TLS at the Edge (Prevent Origin Bypass)"
+description: "How to secure an AWS Application Load Balancer (ALB) behind CloudFront so users can’t bypass WAF/TLS at the edge—using a custom header check and listener rules."
 date:   2022-01-26 11:36:37 +0530
 categories: AWS
+image: /assets/ELBWAF.png
 ---
-I was writing a secure, scalable and highly available web app using below architecture on AWS. 
-1. For Database I have decided to use RDS with Multi-AZ Deployment.
-2. For compute I was using Auto Scaling EC2 Instances behind a Application  Load Balancer.
-3. I have used public subnet to host my ELB and separate private subnet to host my application server and RDS database.
+When you put **AWS WAF** and **TLS termination** on **CloudFront**, you get protection and performance at the edge. But there’s a common gap: users can still call your **ALB (origin)** directly and bypass those edge controls unless you explicitly block “origin bypass”.
 
-I was also planning to use WAF and TLS termination at my ELB. 
-To improve my apps performance for my Global user I have also decide to use  Cloud Front. 
-Now I can put my TLS termination and WAF at the Cloud Front also. I have decide to use WAF and TLS termination at Cloud Front for below benefits. 
+This post shows one simple pattern to secure an **Application Load Balancer (ALB) behind CloudFront** so the ALB only serves requests that came through CloudFront.
 
-1. Since WAF Rule will get executed  at Edge Location It wil reduce Load on my ELB.
-2. Since TLS termination wil also take place at Edge location again it will  reduce load on my ELB.
+## Reference architecture
+I was building a secure, scalable, and highly available web app using this AWS setup:
+- **Database**: Amazon RDS (Multi-AZ)
+- **Compute**: Auto Scaling EC2 instances behind an **Application Load Balancer (ALB)**
+- **Networking**: public subnets for the ALB, private subnets for app servers and the RDS database
 
-These two operation will need a small compute, so I have decided  to use edge location for these task. Since my ELB is still accessible from internet and if someone decide to call ELB end point from internet they can skip those validation.
-In this article  I will mainly talk how to secure the ELB behind CLoud Front so that ELB can be called from only Cloud Front.  
-This solution io not specific to any particular situation this is more about how securing the ELB behind the Cloud Front.      
+I initially planned to use WAF and TLS termination at the ALB. But to improve performance for global users, I decided to place **CloudFront** in front—then move **WAF** and **TLS termination** to CloudFront for:
+
+- **Lower ALB load**: WAF rules run at edge locations
+- **Lower TLS overhead**: TLS handshakes terminate at the edge
+
+## The problem: origin bypass
+Even with CloudFront in front, your ALB is still internet-reachable. If someone calls the ALB DNS name directly, they can bypass the WAF/TLS configuration you placed on CloudFront.
+
+The goal is simple: **the ALB should only accept requests forwarded by CloudFront**.
  
-<img alt='AWS' src='/assets/ELBWAF.png'>
+<img alt="AWS architecture: CloudFront in front of ALB with WAF and TLS termination at the edge" src="/assets/ELBWAF.png">
 
-I though about a monitoring the IP cloud Front IP address and keep on  updating it at ELB  Security Group But it seems to be a more complex and i was not sure about it.
+I considered monitoring CloudFront IP ranges and updating the ALB security group, but that felt operationally complex.
 
-Here I am thinking about using custom header at Cloud Front 
+Instead, here’s a pragmatic approach: **have CloudFront add a secret custom header**, and configure the **ALB listener** to only forward requests that contain that header.
 
+## Solution: CloudFront custom header + ALB listener rule
 
-**1. Create a Custom Header**
- Create a custom header at Cloud Front and assign some guid value.
-<img alt='AWS' src='/assets/customheader.png'>
+### 1) Create a custom header in CloudFront
+In your CloudFront origin request settings, add a custom header with a hard-to-guess value (treat it like a secret).
 
-**2. Update the ELB Rule:** 
-Create  a new ELB rule for custom header validation with 100 % traffic to your target Group.
-Update the existing rule(without heard) to return any error code may be 403.
+<img alt="CloudFront origin configuration showing a custom header for origin authentication" src="/assets/customheader.png">
 
-<img alt='AWS' src='/assets/elb.png'>
+### 2) Add an ALB listener rule to validate the header
+- Create a new ALB listener rule that checks for the custom header and forwards **100%** traffic to your target group.
+- Update the default / existing rule (without the header) to return an error like **403 Forbidden**.
 
-Validate your setup by sending the request to Cloud Front and ELB. While  Cloud Front should return the expected response and ELB should return the configured error code.
+<img alt="ALB listener rules validating CloudFront custom header before forwarding to target group" src="/assets/elb.png">
 
-I wil see how i can automate this with Terraform/ CloudFormation.  
+### 3) Validate
+- Request via **CloudFront** → should return your expected app response
+- Request the **ALB** directly → should return **403** (or your configured error response)
+
+## Hardening notes (recommended)
+- **Rotate the secret header value** periodically (and whenever you suspect leakage).
+- **Keep WAF at CloudFront** for edge protection, but consider also having basic protections at the ALB if your risk warrants it.
+- If feasible in your environment, prefer network-based restriction too (e.g., limiting inbound origin access to CloudFront origin-facing IP ranges / managed prefix lists), and use the header check as defense-in-depth.
+
+## FAQ
+### Is a custom header enough to stop origin bypass?
+It’s a strong and widely used control. For higher assurance, combine it with network restrictions (security group rules) and monitoring/alerting on direct ALB hits.
+
+### What error code should the ALB return for direct requests?
+Common choices are **403** (forbidden) or **404** (not found). 403 is clearer for operators; 404 can reduce signal to attackers.
+
+### Can I automate this with Terraform or CloudFormation?
+Yes—CloudFront origin custom headers and ALB listener rules are both automatable. (I’ll add an infra-as-code version in a follow-up.)
 
 
 

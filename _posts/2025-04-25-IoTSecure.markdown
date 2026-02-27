@@ -1,111 +1,129 @@
-﻿---
+---
 layout: post
 comments: true
-IDENTIFIER: IoT 
-title:  "Secure Boot in  IoT  Soc"
-description: Secure Boot | Immutable Boot |Red| IoT| Security|SoC
+IDENTIFIER: IoT
+title: "Secure Boot for IoT SoCs: Root of Trust, Chain of Trust, and Anti-Rollback"
+description: "Secure boot explained for IoT SoCs: Boot ROM root of trust, signature verification, chain of trust, anti-rollback, and secure OTA updates aligned with EU RED."
 date:   2025-04-25 11:36:37 +0530
 categories: IoT
+image: /assets/SecureBoot.png
 ---
-<img alt='Secure Boot' src='/assets/SecureBoot.png'>
+<img alt="Secure boot chain of trust and verification flow in an IoT SoC" src="/assets/SecureBoot.png">
 
-One of the mandet from [EU RED Cybersecurity Regulation](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R030)
-is 
-## Software update mechanisms: OTA (Over-the-Air) updates must be secure and verifiable.
-Let see what is Secure Boot and how it will help us in achiving the same.
+Secure OTA (Over-the-Air) updates are only as strong as the device’s boot integrity. One of the key expectations in the [EU RED Cybersecurity Regulation](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R030) is that **software update mechanisms must be secure and verifiable**.
 
-Secure Boot is a hardware-rooted security mechanism that ensures a device boots using only trusted firmware and software.
+This post explains **secure boot for IoT SoCs** and how it forms the foundation for trustworthy firmware updates.
 
-**It prevents:**
+**Secure boot** is a hardware-rooted security mechanism that ensures a device boots using only **trusted, vendor-signed** firmware and software.
+
+## Key takeaways
 - Malware or unauthorized code from executing during boot.
-- Rollback attacks by verifying firmware version integrity.
+- Rollback attacks by enforcing firmware version integrity (anti-rollback).
+- “Bypass” of update security controls by ensuring only verified firmware can run.
 
-## **🧠 Secure Boot Architecture in a Chipset**
-1. **Root of Trust (RoT) Definition:** Immutable code stored in ROM (Read-Only Memory) inside the chipset.
+## Secure boot architecture in an IoT SoC
+### Root of trust (RoT)
+Immutable code stored in ROM (Read-Only Memory) inside the chipset.
 
-**Purpose:** Verifies the authenticity of the next boot stage.
+**Purpose**: Verify the authenticity of the next boot stage.
 
-**Implemented As:**
+**Common implementations**:
 
 - Hardcoded bootloader hash or public key
 - ROM-based signature validation logic
 
-**2. Boot ROM**
+### Boot ROM
 The first code executed on power-on.
 
 Performs cryptographic validation (typically RSA/ECDSA) of:
 - The first-stage bootloader
-- Using digital signatures and a public key embedded in ROM
+- Using digital signatures and a public key embedded in ROM (or OTP/eFuses, depending on the SoC)
 
-**3. Chain of Trust**
-- Each boot stage cryptographically verifies the next:
-- Boot ROM → 1st Stage Bootloader → 2nd Stage Bootloader → OS Kernel → Trusted App/OS
-- If any step fails verification:
-  - Boot halts
-  - Optionally enters recovery mode
+### Chain of trust
+Each boot stage cryptographically verifies the next stage:
 
-**4. Cryptographic Elements**
+- Boot ROM → 1st stage bootloader → 2nd stage bootloader → OS kernel → trusted app/OS
+
+If any step fails verification, the device typically:
+- Halts boot, and/or
+- Enters a recovery / DFU mode (platform-specific)
+
+### Cryptographic elements
 - Asymmetric crypto (RSA, ECDSA): for verifying signatures
 - Symmetric crypto (AES, HMAC): for encrypting or authenticating firmware
 - Hashing (SHA-256/512): to ensure data integrity
 
-**5. Anti-Rollback Protection**
-- Uses a monotonic counter or version fuse (eFuses or OTP memory)
-- Prevents firmware downgrade attacks
+### Anti-rollback protection
+Anti-rollback prevents firmware **downgrade** attacks (reinstalling an older, vulnerable image).
 
-**6. Key Storage**
-- Public key: burned into ROM or eFuses
-- Private key: securely held by the firmware signing authority (not on-chip)
+Common mechanisms:
+- Monotonic counter / version fuses (eFuses or OTP memory)
+- Signed firmware metadata including a version number that must monotonically increase
 
-**7. Firmware Update Support**
+### Key storage and signing
+- **Public key**: burned into ROM or stored in OTP/eFuses (device trust anchor)
+- **Private key**: held by the firmware signing authority (never on the device)
+
+### Secure firmware update (OTA) support
+Secure boot is what makes OTA updates *verifiable*:
 - Only signed updates are accepted
-- Version check prevents downgrading
+- Version checks prevent downgrades
 
 Some platforms support encrypted firmware as well
 
-## **🔄 Secure Boot Flow Summary**
+## Secure boot flow summary
 
-1. **Power On**
+1. **Power on**
 
    ↓
 2. **Boot ROM (RoT)**
-   - Verifies 1st Bootloader Signature
+   - Verifies 1st stage bootloader signature
 
    ↓
-3. **1st Bootloader**
-   - Verifies 2nd Bootloader
+3. **1st stage bootloader**
+   - Verifies 2nd stage bootloader
 
    ↓
-4. **2nd Bootloader / Kernel**
-   - Verifies OS or Trusted Apps
+4. **2nd stage bootloader / kernel**
+   - Verifies OS or trusted apps
 
    ↓
 5. **System Ready**
 
-## **🔧 Example in Practice**
-For an IoT SoC (e.g.,NRF, NXP, STMicro, Qualcomm):
+## Example in practice (typical IoT SoC)
+For an IoT SoC (e.g., Nordic, NXP, STMicroelectronics, Qualcomm):
 - Boot ROM is fixed in silicon.
-- Secure Key Storage in eFuses or OTP memory.
-- Bootloader uses X.509 certificates for chain-of-trust.
-- Anti-rollback via version field in firmware and fuse-based version checks.
+- Trust anchor stored in ROM / OTP / eFuses (platform-specific).
+- Bootloader may use X.509 certificates to represent a chain of trust.
+- Anti-rollback via signed version metadata and/or fuse-based version checks.
 
-## **✅ Benefits**
+## Benefits
 - Ensures system starts in a known-good state
 - Protects against bootloader or firmware tampering
 - Forms the foundation for Trusted Execution Environments (TEE) and Secure Firmware Updates
 
-## **⚠️ Challenges**
+## Challenges
 - Complex key management
 - Device bricking if Secure Boot keys or policies are misconfigured
 - Performance overhead during boot (mitigated with hardware acceleration)
-## **🔒 Chipset Verification** 
 
-Chipset secucity level can be validated at Platform Security Architecture [PSA](https://www.psacertified.org/)
-There are 3 Level of security
+## Validating chipset security (PSA Certified)
+
+Chipset security can be validated via Platform Security Architecture (PSA) certification: [PSA Certified](https://www.psacertified.org/).
+
+There are three PSA Certified security levels:
 - **Level 1**: This is the foundational level, focusing on security best practices. It involves a questionnaire-based assessment to ensure compliance with baseline security requirements. It is ideal for demonstrating basic security measures
 - **Level 2**: This level provides protection against scalable software attacks. It includes lab-based evaluations and vulnerability analysis to ensure the robustness of the device's security features
 - **Level 3**: The highest level, designed for devices requiring substantial assurance against both software and hardware attacks. It involves rigorous testing, including penetration tests and side-channel analysis, to verify the device's resilience
 
-# For RED compliance, Level 3 is recommended.	
+## FAQ
+### Is secure boot required for EU RED compliance?
+EU RED is a regulation (not a single “checklist”), but secure boot is commonly treated as a foundational control because it enforces **trusted firmware execution** and supports **verifiable updates**.
+
+### Does secure boot automatically make OTA updates secure?
+Not by itself. Secure boot ensures only trusted code runs at boot. For secure OTA, you also need **signed update packages**, **anti-rollback**, and a robust update/recovery strategy.
+
+### Which PSA level should I target for EU RED?
+It depends on your product risk profile and threat model. For higher assurance devices, **Level 3** is often used as a stronger benchmark.
 
 
