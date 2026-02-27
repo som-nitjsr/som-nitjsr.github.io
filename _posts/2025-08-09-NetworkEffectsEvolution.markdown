@@ -6,6 +6,10 @@ title:  "How Network Effects Need to Evolve: From Direct & Indirect to Data-Driv
 description: CTO | Network Effects | Digital Strategy
 date:   2025-08-09 11:36:37 +0530
 categories: CTO
+image: /assets/networkeffects.png
+featured: true
+featured_section: CTO Leadership
+featured_rank: 5
 ---
 Traditional network effects powered the last generation of tech giants. But in today's data-rich, Gen AI-driven world, understanding only direct and indirect network effects isn't enough for management teams.
 

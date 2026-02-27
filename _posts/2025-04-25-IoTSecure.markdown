@@ -7,6 +7,9 @@ description: "Secure boot explained for IoT SoCs: Boot ROM root of trust, signat
 date:   2025-04-25 11:36:37 +0530
 categories: IoT
 image: /assets/SecureBoot.png
+featured: true
+featured_section: Security & Innovation
+featured_rank: 2
 ---
 <img alt="Secure boot chain of trust and verification flow in an IoT SoC" src="/assets/SecureBoot.png">
 

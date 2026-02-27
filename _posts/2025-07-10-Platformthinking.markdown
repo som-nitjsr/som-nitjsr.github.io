@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 comments: true
 IDENTIFIER: Leadership 
@@ -6,6 +6,10 @@ title:  "Why Every Digital Product Should Think Like a Platform — Even in 
 description: CTO | MBA | Innovation
 date:   2025-07-10 11:36:37 +0530
 categories: CTO
+image: /assets/PLatformthinking.png
+featured: true
+featured_section: Digital Transformation
+featured_rank: 2
 ---
 <p align="center">
 <img alt='PLatform Thinking' src='/assets/PLatformthinking.png'>

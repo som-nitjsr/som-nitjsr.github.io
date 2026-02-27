@@ -14,28 +14,26 @@ Welcome to the intersection of technology strategy and executive leadership. Her
 
 ## Featured Insights
 
-### 🎯 CTO Leadership
-- **[Anthropic 'Coworker' vs Microsoft Copilot: How one reframed the problem—and reached the destination faster](/2026/02/07/AnthropicCoworker-vs-MicrosoftCopilot/)** - Where AI is integrated in the stack matters more than model quality
-- **[Speed vs Correctness: The Invisible Tax of Delayed Decisions](/2026/01/01/SpeedVsCorrectness/)** - The invisible tax of delayed decisions
-- **[The Future of Intelligent Systems Lies at the Edge—Here's Why It Matters Now](/2025/09/21/EdgeIntelligentSystems/)** - Why edge intelligence is becoming the defining characteristic of next-generation systems.
-- **[Why Traditional Strategies Are No Longer Enough in the Age of GenAI and Data](/2025/09/07/TraditionalStrategiesGenAI/)** - Building competitive advantage through data intelligence
-- **[How Network Effects Need to Evolve: From Direct & Indirect to Data-Driven Network Effects](/2025/08/09/NetworkEffectsEvolution/)** - Building competitive advantage through data intelligence
-- **[5 Soft Skills That Matter More Than Tech at the C-Level](/2025/08/01/SoftSkillatClevel/)** - The leadership muscles that carry strategy forward
-- **[What an MBA Taught Me About Thinking Like a CTO](/2025/05/01/ArchitectToCTOviaMBA/)** - From technical authority to strategic influence
-- **[Model Context Protocol (MCP): The Foundation for AI Agent Ecosystems and the Way Forward](/2025/08/22/ModelContextProtocol/)** - The new standard for AI agent collaboration
+{% assign featured_posts = site.posts | where_exp: "p", "p.featured == true" | sort: "featured_rank" %}
+{% assign featured_sections = featured_posts | group_by: "featured_section" %}
+{% assign ordered_sections = "CTO Leadership|Digital Transformation|Security & Innovation|Sustainability" | split: "|" %}
 
+{% for section_name in ordered_sections %}
+{% assign section = featured_sections | where: "name", section_name | first %}
+{% if section %}
+### {{ section.name }}
 
-### 🚀 Digital Transformation
-- **[Can GenAI Transform Field Service or Predictive Maintenance? Here's What We're Learning](/2025/11/21/Can-GenAI-transform-field-service-or-predictive-maintenance/)** - Transforming industrial maintenance with Generative AI
-- **[Why Every Digital Product Should Think Like a Platform](/2025/07/10/Platformthinking/)** - Building scalable, reusable foundations
-- **[Generative AI in the Enterprise](/2024/02/01/GenerativeAIintheEnterprise/)** - Strategic implementation beyond the hype
+{% assign posts = section.items | sort: "featured_rank" %}
+{% for post in posts limit: 8 %}
+{% assign blurb = post.description | default: post.excerpt %}
+{% if blurb contains "|" %}
+  {% assign blurb = post.excerpt %}
+{% endif %}
+- **[{{ post.title }}]({{ post.url }})** - {{ blurb | strip_html | strip_newlines | truncate: 120 }}
+{% endfor %}
 
-### 🔒 Security & Innovation
-- **[IoT Security Strategy](/2025/04/20/IoTSecurity/)** - Securing the connected future
-- **[Securing ELB with WAF](/2022/01/26/SecuringELBWAF/)** - Cloud security best practices
-
-### 🌳 Sustainability
-- **[How Cloud and IoT Can Help Meet ESG Goals in Industrial Sectors](/2025/11/02/How-cloud-and-IoT-can-help-meet-ESG-goals-in-industrial-sectors/)** - Driving sustainability with technology
+{% endif %}
+{% endfor %}
 
 ---
 
@@ -71,6 +69,8 @@ Whether you're a technical leader aspiring to CTO roles or an experienced execut
 - **Navigate emerging technologies** with strategic clarity
 
 **[Explore All Insights →](/blog)** | **[Connect for Strategic Discussions →](/about/)**
+
+**Browse by topic →** **[Categories](/categories/)** | **[Tags](/tags/)**
 
 ---
 

@@ -6,6 +6,9 @@ title: "Why Traditional Strategies Are No Longer Enough in the Age of GenAI and 
 description: Strategic transformation | Generative AI | Data-driven leadership | Digital disruption | CTO strategy
 date: 2025-09-07 10:00:00 +0530
 categories: Strategy
+featured: true
+featured_section: CTO Leadership
+featured_rank: 4
 ---
 
 For decades, business leaders relied on tried-and-tested strategy frameworks to gain an edge. Michael Porter’s ideas of Cost Leadership, Differentiation, and the Productivity Frontier dominated boardroom discussions and MBA classrooms alike.

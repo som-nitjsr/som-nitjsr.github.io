@@ -6,6 +6,9 @@ title: "Speed vs Correctness: The Invisible Tax of Delayed Decisions"
 description: Leadership | Decision Making | Agility | Strategy | Management
 date: 2026-01-01 09:00:00 +0530
 categories: Leadership
+featured: true
+featured_section: CTO Leadership
+featured_rank: 2
 ---
 
 In the fast-paced world of technology and business, leaders often face a paralyzed dilemma: the tension between **speed** (making a decision quickly) and **correctness** (making the *perfect* decision).

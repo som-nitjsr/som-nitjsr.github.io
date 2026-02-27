@@ -6,6 +6,10 @@ title:  "Generative AI in the Enterprise - Training/Inferencing on-premise"
 description: Private Cloud | Generative AI |HP| Nvidia| Intel
 date:   2024-02-01 11:36:37 +0530
 categories: AI
+image: /assets/h100.png
+featured: true
+featured_section: Digital Transformation
+featured_rank: 3
 ---
 <img alt='Gen AI' src='/assets/h100.png'>
 

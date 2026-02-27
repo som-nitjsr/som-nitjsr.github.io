@@ -6,6 +6,10 @@ title: "Anthropic 'Coworker' vs Microsoft Copilot: How one reframed the problemâ
 description: GenAI | AI Assistants | Copilot | Claude | Enterprise AI Strategy
 date: 2026-02-07 10:00:00 +0530
 categories: GenAI
+image: /assets/coworkervscopilot.png
+featured: true
+featured_section: CTO Leadership
+featured_rank: 1
 ---
 
 * Microsoft spent **years** building Copilot as a *feature-layer assistant* embedded across apps.

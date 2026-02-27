@@ -6,6 +6,10 @@ title:  "Model Context Protocol (MCP): The Foundation for AI Agent Ecosystems an
 description: CTO | AI Strategy | Model Context Protocol | AI Agents | Digital Transformation
 date:   2025-08-22 11:36:37 +0530
 categories: CTO
+image: /assets/MCP.png
+featured: true
+featured_section: CTO Leadership
+featured_rank: 8
 ---
 
 The AI landscape is evolving from isolated models to interconnected ecosystems where AI agents collaborate, share context, and orchestrate complex workflows. At the heart of this transformation is the **Model Context Protocol (MCP)**—a standardized framework that's becoming the TCP/IP for AI systems.

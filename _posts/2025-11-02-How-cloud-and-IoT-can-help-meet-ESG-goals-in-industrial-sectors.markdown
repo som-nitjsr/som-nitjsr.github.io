@@ -6,6 +6,9 @@ title: "How Cloud and IoT Can Help Meet ESG Goals in Industrial Sectors"
 description: ESG | Cloud Computing | IoT | Industrial Sector | Sustainability
 date: 2025-11-02 10:00:00 +0530
 categories: ESG
+featured: true
+featured_section: Sustainability
+featured_rank: 1
 ---
 
 In today’s business landscape, Environmental, Social, and Governance (ESG) goals are no longer a secondary concern—they are a core component of a successful and sustainable business strategy. For industrial sectors, which are often at the forefront of environmental and social impact, meeting these goals is both a challenge and a significant opportunity.

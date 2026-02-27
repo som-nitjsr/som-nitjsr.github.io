@@ -26,6 +26,18 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://som-nitjsr.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
+# SEO identity (used by jekyll-seo-tag for OpenGraph/Twitter/JSON-LD)
+lang: en
+author:
+  name: Somnath Shukla
+logo: /assets/logo.svg
+social:
+  name: Somnath Shukla
+  links:
+    - https://www.linkedin.com/in/somnath-shukla/
+    - https://github.com/som-nitjsr
+    - https://www.credly.com/users/somnath-shukla/badges
+
 
 # Build settings
 #theme: just-the-docs
