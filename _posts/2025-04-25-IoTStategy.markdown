@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 comments: true
 IDENTIFIER: IoT 
@@ -7,6 +7,7 @@ description: Strategy | Prouct |Solution| IoT|
 date:   2025-04-25 11:36:37 +0530
 categories: IoT
 ---
+tags: [IoT, Strategy, Products, Platforms, Services, Solutions]
 <img alt='Product Solutions' src='/assets/productsolutions.png'>
 
 # 🔁 The Four Battlegrounds of IoT Strategy: A Blueprint for Industrial Transformation

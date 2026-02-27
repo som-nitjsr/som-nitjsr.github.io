@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 comments: true
 IDENTIFIER: Leadership 
@@ -7,6 +7,7 @@ description: Delivery | Discovery | Innovation
 date:   2025-05-01 11:36:37 +0530
 categories: Innovation
 ---
+tags: [Innovation, Delivery, Discovery, Leadership, Strategy]
 <img alt='Delivery vs Discovery Innovation' src='/assets/Delivery vs Discovery Innovation.png'>
 
 ## **Summary:**

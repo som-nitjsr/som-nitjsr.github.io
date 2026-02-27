@@ -11,6 +11,7 @@ featured: true
 featured_section: Security & Innovation
 featured_rank: 2
 ---
+tags: [IoT, Secure Boot, Firmware, Security, EU RED]
 <img alt="Secure boot chain of trust and verification flow in an IoT SoC" src="/assets/SecureBoot.png">
 
 Secure OTA (Over-the-Air) updates are only as strong as the device’s boot integrity. One of the key expectations in the [EU RED Cybersecurity Regulation](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R030) is that **software update mechanisms must be secure and verifiable**.

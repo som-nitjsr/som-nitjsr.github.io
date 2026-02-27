@@ -11,6 +11,7 @@ featured: true
 featured_section: Security & Innovation
 featured_rank: 3
 ---
+tags: [AWS, CloudFront, ALB, WAF, Security]
 When you put **AWS WAF** and **TLS termination** on **CloudFront**, you get protection and performance at the edge. But there’s a common gap: users can still call your **ALB (origin)** directly and bypass those edge controls unless you explicitly block “origin bypass”.
 
 This post shows one simple pattern to secure an **Application Load Balancer (ALB) behind CloudFront** so the ALB only serves requests that came through CloudFront.

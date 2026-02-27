@@ -9,6 +9,7 @@ categories: ESG
 featured: true
 featured_section: Sustainability
 featured_rank: 1
+tags: [ESG, Cloud, IoT, Sustainability, Industrial]
 ---
 
 In today’s business landscape, Environmental, Social, and Governance (ESG) goals are no longer a secondary concern—they are a core component of a successful and sustainable business strategy. For industrial sectors, which are often at the forefront of environmental and social impact, meeting these goals is both a challenge and a significant opportunity.

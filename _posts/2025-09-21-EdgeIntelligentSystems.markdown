@@ -11,6 +11,7 @@ featured: true
 featured_section: CTO Leadership
 featured_rank: 3
 ---
+tags: [Edge Computing, AI, Intelligent Systems, Strategy, Digital Transformation]
 
 The future of intelligent systems isn't in massive data centers or cloud platforms—it's at the edge, where data meets action in real-time. As technology leaders, understanding this shift isn't just about staying current with trends—it's about positioning your organization for the next wave of competitive advantage.
 

@@ -7,6 +7,7 @@ description: Private Cloud | Azure Stack HCI |HCI| Azure
 date:   2023-07-01 11:36:37 +0530
 categories: HCI
 ---
+tags: [Cloud Bursting, Hybrid Cloud, Azure, Private Cloud, Scalability]
 With the rise of Private Cloud there is again the discussion how to utilize/ optimize the Capex in enterprise private cloud. **Private Cloud** is need of the house based on different requirment specially the data locality and full control over the cloud. Though almost all the Private Cloud Provider support the scale you can start from two node cluster and scale based on your need. But this scale is not going to as instantaneously as in Public Cloud. Off course it require the hardware and that may take some time may be a month. Even though you can plan your capacity but bottom line is it is going to take some time to scale your private cluster. This is one scenario and there are many more apps which only need to scale once in a year e.g. results.
 
 So what is Cloud Burst and how it is going to help?

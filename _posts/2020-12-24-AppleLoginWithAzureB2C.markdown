@@ -8,6 +8,7 @@ description: Apple Sign In| Azure|AD B2C| OpenId Connect|
 date:   2020-12-24 13:36:37 +0530
 categories: Azure
 ---
+tags: [Azure AD B2C, Apple Sign In, OpenID Connect, Identity, Security]
 
 I love Azure Ad B2C and have done couple of integration with multiple IDP like Microsoft, Google etc. But this time I wanted to try Apple Sign In.
 I have followed [Authenticating Users with Sign in with Apple](https://developer.apple.com/documentation/sign_in_with_apple/sign_in_with_apple_rest_api/authenticating_users_with_sign_in_with_apple)

@@ -8,6 +8,7 @@ description: Kubernetes| Azure| Devops| AKS| Azure Devops Pipelines| CI CD| Wind
 date:   2020-02-03 13:36:37 +0530
 categories: Aks
 ---
+tags: [AKS, Kubernetes, .NET Framework, DevOps, CI/CD, Azure]
 I got Opportunity to Migrate an existing  legacy app to Kubernetes.
 It has mainly two Part 
 1. Couple of SPA  in  Angular
