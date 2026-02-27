@@ -6,13 +6,13 @@ layout: default
   <!-- Reading time and social sharing -->
   <div class="post-meta">
     <span class="reading-time">
-      📖 {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read
+      {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read
     </span>
     <div class="social-share">
-      <span>Share:</span>
-      <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener">🐦 Twitter</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener">💼 LinkedIn</a>
-      <a href="mailto:?subject={{ page.title | url_encode }}&body=Check out this article: {{ site.url }}{{ page.url }}" target="_blank" rel="noopener">📧 Email</a>
+      <span>Share</span>
+      <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:?subject={{ page.title | url_encode }}&body=Check out this article: {{ site.url }}{{ page.url }}" target="_blank" rel="noopener">Email</a>
     </div>
   </div>
 
@@ -20,38 +20,38 @@ layout: default
 
   <!-- Related posts section -->
   <div class="related-posts">
-    <h3>📚 Related Articles</h3>
+    <h3>Related articles</h3>
     <div class="related-grid">
-      {% for post in site.posts limit: 3 %}
-        {% if post.url != page.url %}
-          <div class="related-post">
-            <a href="{{ post.url }}">
-              <h4>{{ post.title }}</h4>
-              <p>{{ post.description }}</p>
-              <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-            </a>
-          </div>
-        {% endif %}
+      {% assign related = site.posts | where_exp: "p", "p.url != page.url" %}
+      {% if page.categories and page.categories.size > 0 %}
+        {% assign cat = page.categories[0] %}
+        {% assign related = related | where_exp: "p", "p.categories contains cat" %}
+      {% endif %}
+      {% for post in related limit: 3 %}
+        <div class="related-post">
+          <a href="{{ post.url }}">
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.description }}</p>
+            <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+          </a>
+        </div>
       {% endfor %}
     </div>
   </div>
 
   <!-- Newsletter signup -->
   <div class="newsletter-signup">
-    <h3>💡 Stay Updated</h3>
-    <p>Get the latest insights on digital leadership and CTO strategies delivered to your inbox.</p>
-    <form class="newsletter-form">
-      <input type="email" placeholder="Enter your email" required>
-      <button type="submit">Subscribe</button>
-    </form>
+    <h3>Stay updated</h3>
+    <p>Subscribe via RSS to get new posts as they’re published.</p>
+    <p><a href="/feed.xml" style="color: white; text-decoration: underline;">Subscribe to RSS</a></p>
   </div>
 </article>
 
 {% if page.comments %}
 <div class="comments-section">
   <hr>
-  <h3>💬 Join the Conversation</h3>
-  <p>What soft skills have been most valuable in your leadership journey? Share your thoughts below.</p>
+  <h3>Comments</h3>
+  <p>Have a question or a different perspective? Add a comment below.</p>
   {% include disqus.html %}
 </div>
 {% endif %}
@@ -209,28 +209,4 @@ layout: default
 }
 </style>
 
-<!-- Include newsletter functionality -->
-<script>
-// Fallback newsletter functionality if external script fails to load
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Post layout loaded');
-    
-    // Simple newsletter form handling
-    const newsletterForm = document.querySelector('.newsletter-form');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const emailInput = this.querySelector('input[type="email"]');
-            const email = emailInput.value.trim();
-            
-            if (email) {
-                alert('Thanks for subscribing! Check your email for confirmation.');
-                emailInput.value = '';
-            } else {
-                alert('Please enter a valid email address.');
-            }
-        });
-    }
-});
-</script>
-<script src="/assets/js/newsletter.js"></script>
+<!-- Newsletter handled via RSS link above -->
