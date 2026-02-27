@@ -1,13 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Digital Leadership Lab logo">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Digital Leadership Lab">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#667eea"/>
-      <stop offset="1" stop-color="#764ba2"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#6366f1"/>
     </linearGradient>
   </defs>
-  <rect x="48" y="48" width="416" height="416" rx="96" fill="url(#g)"/>
-  <text x="256" y="294" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="164" font-weight="800" fill="#ffffff" letter-spacing="2">
+
+  <!-- Rounded square background -->
+  <rect x="40" y="40" width="432" height="432" rx="96" fill="url(#bg)"/>
+
+  <!-- Network / graph for “digital systems” -->
+  <circle cx="180" cy="180" r="18" fill="url(#node)"/>
+  <circle cx="332" cy="150" r="16" fill="url(#node)"/>
+  <circle cx="352" cy="280" r="18" fill="url(#node)"/>
+  <circle cx="210" cy="332" r="20" fill="url(#node)"/>
+  <circle cx="140" cy="260" r="14" fill="url(#node)"/>
+
+  <path d="M196 176 L316 154" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+  <path d="M194 190 L340 272" stroke="#4f46e5" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+  <path d="M158 250 L196 190" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+  <path d="M156 266 L204 324" stroke="#4f46e5" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+  <path d="M222 326 L336 282" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- “Leadership” bar chart motif -->
+  <rect x="230" y="340" width="20" height="70" rx="4" fill="#4b5563"/>
+  <rect x="260" y="320" width="22" height="90" rx="4" fill="#6b7280"/>
+  <rect x="292" y="295" width="24" height="115" rx="4" fill="#e5e7eb"/>
+
+  <!-- Monogram -->
+  <text x="256" y="230" text-anchor="middle"
+        font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+        font-size="64" font-weight="700" letter-spacing="3"
+        fill="#e5e7eb">
     DLL
   </text>
 </svg>
-

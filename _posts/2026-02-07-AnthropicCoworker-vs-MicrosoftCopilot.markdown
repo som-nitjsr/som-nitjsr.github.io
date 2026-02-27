@@ -10,6 +10,7 @@ image: /assets/coworkervscopilot.png
 featured: true
 featured_section: CTO Leadership
 featured_rank: 1
+tags: [GenAI, AI Strategy, Microsoft, Anthropic, Copilot]
 ---
 
 * Microsoft spent **years** building Copilot as a *feature-layer assistant* embedded across apps.
