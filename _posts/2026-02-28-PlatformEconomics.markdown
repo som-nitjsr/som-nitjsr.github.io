@@ -9,7 +9,7 @@ categories: CTO
 image: /assets/platformeconomics.png
 featured: true
 featured_section: CTO Leadership
-featured_rank: 3
+featured_rank: 1
 tags: [GenAI, Platform Economics, Network Effects, AI Agents, Business Models, Enterprise Strategy]
 ---
 
@@ -27,49 +27,7 @@ This creates a *completely different* platform dynamic. The rules are being rewr
 Here's what's actually happening—and why your platform strategy needs to change:
 
 ---
-```mermaid
-graph TB
-    subgraph traditional["🏛️ Traditional Platform Model"]
-        U1["👤 User"]
-        U1 -->|discovers| App["📱 Platform App"]
-        App -->|chooses| P1["🏢 Platform"]
-        P1 -->|transacts| Fee["💰 Fees"]
-        Fee -->|generates| Data["📊 Data"]
-        Data -->|creates| NE["🔗 Network Effects"]
-    end
-    
-    subgraph genai["🤖 GenAI Era Model"]
-        U2["👤 User"]
-        U2 -->|delegates| AI["🧠 AI Agent"]
-        AI -->|queries| API1["🔌 Platform A API"]
-        AI -->|queries| API2["🔌 Platform B API"]
-        AI -->|queries| API3["🔌 Platform C API"]
-        API1 -->|compares| Choice["⚡ Best Deal"]
-        API2 -->|compares| Choice
-        API3 -->|compares| Choice
-        Choice -->|books| Win["✅ Winner"]
-    end
-    
-    subgraph shift["⚙️ The Shift"]
-        NE1["Old: Lock-in at User Layer"]
-        NE2["New: Lock-in at Agent Layer"]
-        SC1["Old: Switching Costs = Friction"]
-        SC2["New: Switching Costs = API Quality"]
-        DM1["Old: User Behavior Data"]
-        DM2["New: Agent Decision Logic"]
-        
-        NE1 -.->|transforms| NE2
-        SC1 -.->|transforms| SC2
-        DM1 -.->|transforms| DM2
-    end
-    
-    traditional -.->|disrupted by| genai
-    genai -->|creates| shift
-    
-    style traditional fill:#e1f5ff
-    style genai fill:#f3e5f5
-    style shift fill:#fff3e0
-    \```
+<img src='/assets/GenAI Platform-2026-02-28-074358.svg'>
 ## How GenAI Breaks the Traditional Platform Model
 
 For 15 years, platform success looked like this:
