@@ -9,8 +9,9 @@ categories: Leadership
 featured: true
 featured_section: CTO Leadership
 featured_rank: 2
----
+
 tags: [Leadership, Decision Making, Strategy, Agility]
+---
 
 In the fast-paced world of technology and business, leaders often face a paralyzed dilemma: the tension between **speed** (making a decision quickly) and **correctness** (making the *perfect* decision).
 

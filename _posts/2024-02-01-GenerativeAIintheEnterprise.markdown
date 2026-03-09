@@ -10,8 +10,9 @@ image: /assets/h100.png
 featured: true
 featured_section: Digital Transformation
 featured_rank: 3
----
+
 tags: [GenAI, Enterprise AI, On-premises, GPUs, Infrastructure]
+---
 <img alt='Gen AI' src='/assets/h100.png'>
 
 Despite the potential benefits of Generative AI in improving business processes, workflows, customer experience, and productivity, organizations may face several challenges in effectively utilizing this technology. Some of the challenges include:

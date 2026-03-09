@@ -10,8 +10,9 @@ image: /assets/networkeffects.png
 featured: true
 featured_section: CTO Leadership
 featured_rank: 5
----
+
 tags: [Network Effects, Data, Strategy, Platform, GenAI]
+---
 Traditional network effects powered the last generation of tech giants. But in today's data-rich, Gen AI-driven world, understanding only direct and indirect network effects isn't enough for management teams.
 
 We need to evolve our thinking to include **Data Network Effects**—where value compounds through data intelligence, not just user connections.

@@ -10,8 +10,9 @@ image: /assets/MCP.png
 featured: true
 featured_section: CTO Leadership
 featured_rank: 8
----
+
 tags: [MCP, AI Agents, AI Strategy, Enterprise, Context]
+---
 
 The AI landscape is evolving from isolated models to interconnected ecosystems where AI agents collaborate, share context, and orchestrate complex workflows. At the heart of this transformation is the **Model Context Protocol (MCP)**—a standardized framework that's becoming the TCP/IP for AI systems.
 

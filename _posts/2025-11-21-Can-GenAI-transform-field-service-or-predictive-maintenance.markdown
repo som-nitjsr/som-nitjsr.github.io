@@ -9,8 +9,9 @@ categories: GenAI
 featured: true
 featured_section: Digital Transformation
 featured_rank: 1
----
+
 tags: [GenAI, Field Service, Predictive Maintenance, Industrial, AI]
+---
 
 In today's industrial landscape, field service operations and predictive maintenance are critical components of operational excellence. Organizations are constantly seeking ways to reduce downtime, optimize maintenance schedules, and improve technician efficiency. The challenge has always been finding the right balance between proactive and reactive maintenance while managing costs and resources effectively.
 

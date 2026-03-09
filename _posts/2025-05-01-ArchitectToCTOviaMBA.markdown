@@ -10,8 +10,9 @@ image: /assets/CTO.png
 featured: true
 featured_section: CTO Leadership
 featured_rank: 7
----
+
 tags: [CTO, MBA, Leadership, Strategy, Career]
+---
 <img alt='CTO' src='/assets/CTO.png'>
 
 I used to see success as optimizing architectures, delivering stable cloud environments, and solving complex technical problems.

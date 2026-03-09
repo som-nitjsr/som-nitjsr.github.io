@@ -10,8 +10,9 @@ image: /assets/PLatformthinking.png
 featured: true
 featured_section: Digital Transformation
 featured_rank: 2
----
+
 tags: [Platform Strategy, Digital Transformation, CTO, Leadership]
+---
 <p align="center">
 <img alt='PLatform Thinking' src='/assets/PLatformthinking.png'>
 </p>

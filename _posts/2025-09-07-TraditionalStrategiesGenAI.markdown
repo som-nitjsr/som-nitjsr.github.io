@@ -9,8 +9,9 @@ categories: Strategy
 featured: true
 featured_section: CTO Leadership
 featured_rank: 4
----
+
 tags: [GenAI, Strategy, Data, Digital Transformation, Leadership]
+---
 
 For decades, business leaders relied on tried-and-tested strategy frameworks to gain an edge. Michael Porter’s ideas of Cost Leadership, Differentiation, and the Productivity Frontier dominated boardroom discussions and MBA classrooms alike.
 

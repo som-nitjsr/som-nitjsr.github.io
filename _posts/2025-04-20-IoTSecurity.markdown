@@ -10,8 +10,9 @@ image: /assets/RED.png
 featured: true
 featured_section: Security & Innovation
 featured_rank: 1
----
+
 tags: [IoT, RED, Cybersecurity, Compliance, EU]
+---
 <img alt='EU Radio Equipment Directive (RED)' src='/assets/RED.png'>
 
 The **EU Radio Equipment Directive (RED) – especially the 2021 Delegated Regulation on cybersecurity** – significantly reshapes IoT development by making **cybersecurity and privacy compliance mandatory**. These rules, enforceable from **August 2025**, affect all **connected devices** marketed in the EU, demanding changes across **hardware design, firmware, data handling, and conformity assessment**.
