@@ -3,8 +3,9 @@ layout: post
 title:  "Service Endpoint"
 date:   2019-11-18 13:36:37 +0530
 categories: Azure
----
+
 tags: [Azure, Service Endpoints, Networking, Security]
+---
 One of best faeture in Azure is Servcie end point. Presently it is available for belwo service.
 Azure Storage
 Azure SQL Database

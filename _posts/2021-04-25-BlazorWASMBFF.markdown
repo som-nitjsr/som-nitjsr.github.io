@@ -6,8 +6,9 @@ title:  "Blazer WASM Backend for Frontend BFF"
 description: Blazer | BFF | Identity Server | YARP | OAuth 2.1 | OpenId Connect| Security |
 date:   2021-04-25 13:36:37 +0530
 categories: BFF
----
+
 tags: [Blazor, BFF, IdentityServer, YARP, Security, OAuth]
+---
 [IETF](https://tools.ietf.org/html/draft-parecki-oauth-browser-based-apps-02#section-6.2) 
 has already recommended Backend for Frontend Security(BFF) for SPA.
 I am big fan of BFF and have implemented for angular SPA.
