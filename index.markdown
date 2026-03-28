@@ -16,7 +16,7 @@ Welcome to the intersection of technology strategy and executive leadership. Her
 
 {% assign featured_posts = site.posts | where_exp: "p", "p.featured == true" | sort: "featured_rank" %}
 {% assign featured_sections = featured_posts | group_by: "featured_section" %}
-{% assign ordered_sections = "CTO Leadership|Digital Transformation|Security & Innovation|Sustainability" | split: "|" %}
+{% assign ordered_sections = "Agentic AI|CTO Leadership|Digital Transformation|Security & Innovation|Sustainability" | split: "|" %}
 
 {% for section_name in ordered_sections %}
 {% assign section = featured_sections | where: "name", section_name | first %}
