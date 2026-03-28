@@ -4,6 +4,8 @@ title: "Trust & Digital Identity in the Gen AI Era"
 date: 2026-03-28
 description: "How credentials, wallets, and institutions must evolve to anchor trust when Gen AI can synthesize any persona, document, or interaction."
 categories: [Digital Trust]
+featured_section: Agentic AI
+featured_rank: 1
 tags:
   - digital identity
   - verifiable credentials
@@ -28,7 +30,7 @@ Passwords, SMS OTPs, and ad‑hoc KYC flows were already creaking. In a world of
 What we need is a stronger trust fabric built on **cryptographically anchored identity**: credentials, wallets, and institutions working together.
 
 ---
-<img src='/assets/Agent.svg'>
+<img src='/assets/Agent.png'>
 ### From “login” to verifiable identity
 
 Most organizations still treat identity as “whatever shows up in my IdP plus some KYC files in a back office.” That model breaks down when:
@@ -66,7 +68,7 @@ In the Gen AI era, the most important properties are:
 - **Revocation and expiry**  
   When people leave a company, devices are compromised, or policies change, you must be able to revoke or short‑lived credentials quickly and have that reflected in verification decisions.
 
-**Strategic implication for CTOs:** design your systems so that *“What do I need to trust here?”* is answered with a small, explicit set of credentials and issuers—not with a tangle of static roles and brittle KYC scripts.
+**Strategic implication for Leaders:** design your systems so that *“What do I need to trust here?”* is answered with a small, explicit set of credentials and issuers—not with a tangle of static roles and brittle KYC scripts.
 
 ---
 
@@ -249,7 +251,7 @@ Getting the technology right is necessary but not sufficient. To make this work 
 
 ---
 
-### A pragmatic roadmap for the next 12–24 months
+### A pragmatic roadmap 
 
 For most CTOs and technology leaders, the question is not *whether* to modernize digital identity, but *how to sequence it*.
 

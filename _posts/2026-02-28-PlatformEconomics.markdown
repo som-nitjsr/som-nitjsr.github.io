@@ -8,7 +8,7 @@ date:   2026-02-28 11:36:37 +0530
 categories: CTO
 image: /assets/platformeconomics.png
 featured: true
-featured_section: CTO Leadership
+featured_section: Agentic AI
 featured_rank: 1
 tags: [GenAI, Platform Economics, Network Effects, AI Agents, Business Models, Enterprise Strategy]
 ---
