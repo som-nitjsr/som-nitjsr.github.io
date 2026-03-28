@@ -6,6 +6,7 @@ description: "How credentials, wallets, and institutions must evolve to anchor t
 categories: [Digital Trust]
 featured_section: Agentic AI
 featured_rank: 1
+featured: true
 tags:
   - digital identity
   - verifiable credentials

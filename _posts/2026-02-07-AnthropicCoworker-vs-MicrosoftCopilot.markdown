@@ -8,8 +8,8 @@ date: 2026-02-07 10:00:00 +0530
 categories: GenAI
 image: /assets/coworkervscopilot.png
 featured: true
-featured_section: CTO Leadership
-featured_rank: 1
+featured_section: Agentic AI
+featured_rank: 2
 tags: [GenAI, AI Strategy, Microsoft, Anthropic, Copilot]
 ---
 
