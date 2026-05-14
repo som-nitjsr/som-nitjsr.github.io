@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Categories
+description: "Explore content by category, covering leadership, digital transformation, emerging tech, and platform strategy."
 nav_order: 4
 permalink: /categories/
 ---

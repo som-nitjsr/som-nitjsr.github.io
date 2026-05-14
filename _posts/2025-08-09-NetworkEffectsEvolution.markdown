@@ -18,7 +18,7 @@ Traditional network effects powered the last generation of tech giants. But in t
 We need to evolve our thinking to include **Data Network Effects**—where value compounds through data intelligence, not just user connections.
 
 Here's why this shift matters for every digital leader:
-![Network Effects Evolution](/assets/networkeffects.png)
+![Evolution of Network Effects in Digital Ecosystems](/assets/networkeffects.png)
 ---
 
 ## The Traditional Network Effects Framework

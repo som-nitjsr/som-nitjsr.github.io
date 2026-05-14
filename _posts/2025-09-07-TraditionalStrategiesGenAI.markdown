@@ -75,7 +75,7 @@ To succeed in the Age of GenAI, leaders must rethink strategy as a living system
 - **From Moats → Networks**: Build defensibility through data ecosystems, partnerships, and network effects—not just cost structures.
 
 ### A Framework for Strategy in the GenAI Era
-![Traditional vs GenAI Strategy](/assets/traditionalvsgenai.png)
+![Comparison of Traditional vs GenAI Business Strategies](/assets/traditionalvsgenai.png)
 
 
 This shift illustrates that traditional strategy hasn’t vanished—it has evolved. The new frontier is built on adaptability, intelligence, and trust.

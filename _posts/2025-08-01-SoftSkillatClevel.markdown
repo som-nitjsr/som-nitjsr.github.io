@@ -13,7 +13,7 @@ featured_rank: 6
 
 tags: [Leadership, Soft Skills, C-Level, CTO, Communication]
 ---
-![Soft Skills](/assets/softskill.png)
+![Essential Soft Skills for C-Level Technology Leaders](/assets/softskill.png)
 
 In an era where every boardroom buzzes with Gen AI, cloud migration, and digital-first thinking, it’s tempting to believe that technical depth is the ultimate success lever at the C-level.
 

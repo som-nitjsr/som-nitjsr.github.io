@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://som-nitjsr.github.io/sitemap.xml
-

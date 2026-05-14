@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Tags
+description: "Discover articles by topic, from cloud architecture and security to AI strategy and enterprise leadership."
 nav_order: 5
 permalink: /tags/
 ---

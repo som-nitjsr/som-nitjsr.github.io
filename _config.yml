@@ -21,8 +21,8 @@
 title: Digital Leadership Lab
   
  
-description: >- # this means to ignore newlines until "baseurl:"
-  Strategic insights for CTOs and technology leaders. From code to strategy, platform thinking to digital transformation. Practical leadership wisdom for the modern tech executive.   
+description: >-
+  Strategic insights for CTOs and technology leaders. Expert perspectives on Digital Transformation, Platform Thinking, and Strategic Leadership for the modern tech executive.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://som-nitjsr.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -31,12 +31,27 @@ lang: en
 author:
   name: Somnath Shukla
 logo: /assets/logo.svg
+favicon: /assets/favicon.png
 social:
   name: Somnath Shukla
   links:
     - https://www.linkedin.com/in/somnath-shukla/
     - https://github.com/som-nitjsr
     - https://www.credly.com/users/somnath-shukla/badges
+  twitter_username: som_nitjsr
+  linkedin_username: somnath-shukla
+
+# Twitter and OpenGraph defaults
+twitter:
+  card: summary_large_image
+  username: som_nitjsr
+  image: /assets/logo.svg
+
+# SEO Plugin defaults
+twitter_username: som_nitjsr
+#facebook:
+#  app_id: 
+#  publisher: 
 
 
 # Build settings

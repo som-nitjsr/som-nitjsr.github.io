@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Blog Posts
+description: "Expert insights, articles, and thought leadership on technology strategy, CTO leadership, and digital innovation."
 nav_order: 3
 has_children: true
 permalink: /blog/

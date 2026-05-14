@@ -20,7 +20,7 @@ The edge represents a fundamental shift from centralized intelligence to distrib
 
 Here's why edge intelligence is becoming the defining characteristic of next-generation systems:
 
-![Edge Intelligence Architecture](/assets/edgeintelligence.png)
+![Distributed Edge Intelligence Architecture and Data Flow](/assets/edgeintelligence.png)
 
 ---
 

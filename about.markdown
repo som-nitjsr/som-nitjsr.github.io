@@ -1,11 +1,12 @@
 ---
 layout: default
 title: About
+description: "Meet Somnath Shukla, a strategic technology leader and CTO advisor specializing in digital transformation, platform thinking, and executive leadership."
 nav_order: 2
 permalink: /about/
 ---
 
-## From Code to Strategy: The CTO Journey
+# From Code to Strategy: The CTO Journey
 
 Somnath Shukla is a strategic technology leader who bridges the gap between technical execution and business transformation. With over 19 years of experience, he's evolved from a Microsoft technologies specialist to a Digital Transformation Leader who thinks in platforms, not just projects.
 

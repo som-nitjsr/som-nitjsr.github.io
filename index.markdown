@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Digital Leadership Lab
+description: "Strategic insights and leadership wisdom for CTOs and technology executives. Exploring digital transformation, platform thinking, and strategic influence."
 nav_order: 1
 ---
 
