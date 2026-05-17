@@ -12,7 +12,7 @@ featured_section: Technical Leadership
 featured_rank: 1
 tags: [Software Engineering, Tech Debt, Generative AI, Engineering Velocity, CTO Leadership, Team Topologies]
 ---
-
+<img src='/assets/ailegacydebt.png' alt='AI Legacy Debt' style='hight:200px; width: 100%; border-radius: 8px;'>
 
 We are currently living through the greatest explosion of productivity in the history of software engineering. 
 
@@ -28,7 +28,7 @@ This is the silent accumulation of vast, syntactically correct, test-passing cod
 
 ---
 
-<img src='/assets/ailegacydebt.png' alt='AI Legacy Debt' style='width: 100%; border-radius: 8px;'>
+
 
 ### Why AI-generated debt is fundamentally different
 
@@ -133,4 +133,4 @@ The code tsunami is here. It is time to start building the levees.
 
 ---
 
-*Are you measuring the cognitive load of your generated codebases? How is your team defending against AI Legacy Debt? Let's discuss on LinkedIn or Twitter.*
+*Are you measuring the cognitive load of your generated codebases? How is your team defending against AI Legacy Debt? 
