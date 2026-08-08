@@ -32,9 +32,9 @@ layout: default
     <h3 class="related-heading">Related articles</h3>
     <div class="related-grid">
       {% assign same_cat_posts = "" | split: "" %}
-      {% if page.categories and page.categories.size > 0 %}
-        {% assign primary_cat = page.categories | first %}
-        {% assign same_cat_posts = site.posts | where_exp: "p", "p.url != page.url and p.categories contains primary_cat" %}
+      {% assign primary_cat = page.categories | first %}
+      {% if primary_cat %}
+        {% assign same_cat_posts = site.posts | where_exp: "p", "p.url != page.url" | where_exp: "p", "p.categories contains primary_cat" %}
       {% endif %}
       {% assign other_posts = site.posts | where_exp: "p", "p.url != page.url" %}
       {% assign related_candidates = same_cat_posts | concat: other_posts | uniq %}

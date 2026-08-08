@@ -147,7 +147,7 @@ The harness is a **service**, not a prompt template. At minimum, it implements s
 
 Reference architecture:
 
-<img src='/assets/agentharness.png' alt='Agent Harness' style='height:200px; width: 100%; border-radius: 8px;'>
+<img src='/assets/agentharness.png' alt='Agent Harness' style='border-radius: 8px;'>
 Each box is platform infrastructure—not glue code in a demo chatbot.
 
 ---
