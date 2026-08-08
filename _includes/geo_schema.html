@@ -1,0 +1,67 @@
+{%- comment -%}
+  GEO (Generative Engine Optimization) structured data.
+  Adds Organization + Person entity blocks for AI citation clarity.
+  BlogPosting/Article JSON-LD is handled by jekyll-seo-tag ({%- seo -%}).
+{%- endcomment -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": {{ site.url | append: "/#organization" | jsonify }},
+  "name": {{ site.title | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "logo": {{ site.logo | absolute_url | jsonify }},
+  "description": {{ site.description | strip_newlines | jsonify }},
+  "founder": {
+    "@type": "Person",
+    "@id": {{ site.url | append: "/about/#person" | jsonify }}
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/somnath-shukla/",
+    "https://github.com/som-nitjsr"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": {{ site.url | append: "/about/#person" | jsonify }},
+  "name": {{ site.author.name | jsonify }},
+  "url": {{ "/about/" | absolute_url | jsonify }},
+  "jobTitle": "Strategic Technology Leader",
+  "description": "CTO advisor specializing in digital transformation, platform thinking, and enterprise AI architecture.",
+  "worksFor": {
+    "@type": "Organization",
+    "@id": {{ site.url | append: "/#organization" | jsonify }}
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/somnath-shukla/",
+    "https://github.com/som-nitjsr",
+    "https://www.credly.com/users/somnath-shukla/badges"
+  ]
+}
+</script>
+
+{%- if page.layout == 'post' and page.faq -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in page.faq -%}
+    {
+      "@type": "Question",
+      "name": {{ item.q | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.a | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}

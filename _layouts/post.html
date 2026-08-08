@@ -3,11 +3,20 @@ layout: default
 ---
 
 <article class="post-content">
-  <!-- Reading time and social sharing -->
+  <!-- Author, dates, and social sharing (GEO: extractable metadata) -->
   <div class="post-meta">
-    <span class="reading-time">
-      {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read
-    </span>
+    <div class="post-byline">
+      <span class="post-author">By <a href="{{ '/about/' | relative_url }}">{{ site.author.name }}</a></span>
+      <span class="post-dates">
+        Published {{ page.date | date: "%B %-d, %Y" }}
+        {% if page.updated %}
+        · Updated {{ page.updated | date: "%B %-d, %Y" }}
+        {% endif %}
+      </span>
+      <span class="reading-time">
+        · {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read
+      </span>
+    </div>
     <div class="social-share">
       <span>Share</span>
       <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener">Twitter</a>
@@ -74,6 +83,25 @@ layout: default
   font-size: 0.9rem;
 }
 
+.post-byline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  align-items: center;
+  color: #6a737d;
+}
+
+.post-author a {
+  color: #0366d6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.post-author a:hover {
+  text-decoration: underline;
+}
+
+.post-dates,
 .reading-time {
   color: #6a737d;
   font-weight: 500;

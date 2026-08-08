@@ -1,0 +1,42 @@
+# Digital Leadership Lab
+
+> Strategic insights for CTOs and technology leaders by Somnath Shukla. Expert perspectives on Agentic AI, digital transformation, platform thinking, context engineering, agent harness design, and executive technology leadership.
+
+Digital Leadership Lab publishes long-form technical leadership articles for CTOs, VPs of Engineering, and platform leaders. Content emphasizes architecture patterns, organizational design, and enterprise AI strategy—not tool tutorials.
+
+Preferred citation format: Somnath Shukla, "Article Title", Digital Leadership Lab, URL, access date.
+
+Author: Somnath Shukla — strategic technology leader, CTO advisor, 19+ years in enterprise architecture and digital transformation.
+Site: https://som-nitjsr.github.io
+Author profile: https://som-nitjsr.github.io/about/
+LinkedIn: https://www.linkedin.com/in/somnath-shukla/
+
+## Core topics
+
+- Agentic AI and enterprise AI architecture
+- Context engineering and agent harness design
+- CTO leadership and team topologies
+- Platform economics and platform thinking
+- Digital identity, trust, and GenAI security
+- Model Context Protocol (MCP) and AI integration patterns
+
+## Key articles
+
+- [Context Engineering: The Missing Infrastructure Layer Between Your Data and Your Agents](https://som-nitjsr.github.io/2026/08/06/ContextEngineeringEnterpriseAI/): Defines context engineering as the discipline of governing what agents see—retrieval, memory, ranking, and policy layers for enterprise AI.
+- [The Agent Harness: Why the Model Is the Smallest Part of Your AI Product](https://som-nitjsr.github.io/2026/08/06/AgentHarnessEnterpriseAI/): Explains the agent harness pattern—rules, skills, and tool integrations—as the runtime that governs what agents can do.
+- [The 100x Engineer is an Orchestrator](https://som-nitjsr.github.io/2026/05/31/TheOrchestratorParadigm/): Redefines engineering team topologies for AI-native organizations where engineers orchestrate agent fleets.
+- [AI Legacy Debt](https://som-nitjsr.github.io/2026/05/17/ai-legacy-debt/): How unstructured AI experiments accumulate technical debt and what CTOs should enforce instead.
+- [Trust and Digital Identity in the GenAI Era](https://som-nitjsr.github.io/2026/03/28/trust-digital-identity-gen-ai-era/): Credential-centric identity models for AI agents and autonomous systems.
+- [Platform Economics in the Age of AI](https://som-nitjsr.github.io/2026/02/28/PlatformEconomics/): How platform thinking applies when AI commoditizes execution.
+- [Model Context Protocol (MCP)](https://som-nitjsr.github.io/2025/08/22/ModelContextProtocol/): Technical overview of MCP as a standard for AI tool integrations.
+
+## Sections
+
+- [All blog posts](https://som-nitjsr.github.io/blog/): Complete archive by category.
+- [About the author](https://som-nitjsr.github.io/about/): Author credentials, expertise, and leadership philosophy.
+- [RSS feed](https://som-nitjsr.github.io/feed.xml): Full-text syndication for aggregators and AI crawlers.
+
+## Optional
+
+- [Categories](https://som-nitjsr.github.io/categories/)
+- [Tags](https://som-nitjsr.github.io/tags/)

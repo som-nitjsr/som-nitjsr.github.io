@@ -1,3 +1,6 @@
 {%- seo -%}
 <link rel="shortcut icon" type="image/png" href="{{ '/assets/favicon.png' | relative_url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | absolute_url }}">
+<meta name="author" content="{{ site.author.name | escape }}">
+{% include geo_schema.html %}
 
