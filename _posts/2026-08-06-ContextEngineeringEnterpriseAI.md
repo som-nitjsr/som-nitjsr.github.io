@@ -166,36 +166,7 @@ When context evals fail, fix the pipeline—not the prompt.
 ### Reference architecture: the context plane
 
 A practical pattern emerging across mature AI-native organizations:
-
-```
-[Agent / Copilot / Workflow]
-           │
-           ▼
-   ┌───────────────────┐
-   │  Context Orchestrator  │  ← intent → evidence plan
-   └─────────┬─────────┘
-             │
-   ┌─────────┼─────────┬─────────────┐
-   ▼         ▼         ▼             ▼
- Structured  Vector   Real-time    Memory
- Connectors  Index    Feeds        Store
-   │         │         │             │
-   └─────────┴─────────┴─────────────┘
-             │
-             ▼
-   ┌───────────────────┐
-   │ Policy & Provenance │  ← IAM, sensitivity, jurisdiction
-   │      Engine         │
-   └─────────┬─────────┘
-             │
-             ▼
-   ┌───────────────────┐
-   │ Context Assembler   │  ← rank, compress, format
-   └─────────┬─────────┘
-             │
-             ▼
-        [Reasoning Model]
-```
+<img src='/assets/contextengineering.png' alt='Context Engineering' style='height:200px; width: 100%; border-radius: 8px;'>
 
 Each box is a platform capability—not a one-off script in a demo repo.
 
