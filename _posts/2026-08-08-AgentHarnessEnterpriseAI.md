@@ -4,7 +4,7 @@ comments: true
 IDENTIFIER: AgentHarness
 title: "The Agent Harness: Why the Model Is the Smallest Part of Your AI Product"
 description: "Cursor proved that rules, skills, and tool integrations—not the LLM—make agents useful. CTOs must build the same harness pattern into enterprise products: a runtime that governs capability, conduct, and action."
-date: 2026-08-08 22:30:00 +0530
+date: 2026-08-08 10:00:00 +0530
 categories: Technical Leadership
 featured: true
 featured_section: Agentic AI

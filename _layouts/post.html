@@ -29,21 +29,21 @@ layout: default
 
   <!-- Related posts section -->
   <div class="related-posts">
-    <h3>Related articles</h3>
+    <h3 class="related-heading">Related articles</h3>
     <div class="related-grid">
-      {% assign related = site.posts | where_exp: "p", "p.url != page.url" %}
+      {% assign same_cat_posts = "" | split: "" %}
       {% if page.categories and page.categories.size > 0 %}
-        {% assign cat = page.categories[0] %}
-        {% assign related = related | where_exp: "p", "p.categories contains cat" %}
+        {% assign primary_cat = page.categories | first %}
+        {% assign same_cat_posts = site.posts | where_exp: "p", "p.url != page.url and p.categories contains primary_cat" %}
       {% endif %}
-      {% for post in related limit: 3 %}
-        <div class="related-post">
-          <a href="{{ post.url }}">
-            <h4>{{ post.title }}</h4>
-            <p>{{ post.description }}</p>
-            <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-          </a>
-        </div>
+      {% assign other_posts = site.posts | where_exp: "p", "p.url != page.url" %}
+      {% assign related_candidates = same_cat_posts | concat: other_posts | uniq %}
+      {% for post in related_candidates limit: 3 %}
+        <a href="{{ post.url | relative_url }}" class="related-post-card">
+          <span class="related-post-title">{{ post.title }}</span>
+          <p class="related-post-desc">{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+          <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+        </a>
       {% endfor %}
     </div>
   </div>
@@ -132,49 +132,68 @@ layout: default
   border-radius: 8px;
 }
 
-.related-posts h3 {
+.related-posts h3,
+.related-heading {
   margin-bottom: 1.5rem;
   color: #24292e;
 }
 
 .related-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
 
-.related-post {
+.post-content a.related-post-card,
+.related-post-card {
+  display: flex;
+  flex-direction: column;
   background: white;
   padding: 1.5rem;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+  text-decoration: none !important;
+  color: inherit !important;
+  border: 1px solid #e1e4e8;
+  border-bottom: 1px solid #e1e4e8 !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.related-post:hover {
-  transform: translateY(-2px);
+.post-content a.related-post-card:hover,
+.related-post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  border-color: #0366d6;
+  border-bottom-color: #0366d6 !important;
+  text-decoration: none !important;
 }
 
-.related-post a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.related-post h4 {
+.related-post-title {
+  display: block;
   margin: 0 0 0.5rem 0;
   color: #0366d6;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
-.related-post p {
+.related-post-card:hover .related-post-title {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.related-post-desc {
   margin: 0 0 1rem 0;
-  color: #6a737d;
-  font-size: 0.9rem;
+  color: #586069;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  flex-grow: 1;
 }
 
 .post-date {
   color: #6a737d;
   font-size: 0.8rem;
+  margin-top: auto;
 }
 
 .newsletter-signup {

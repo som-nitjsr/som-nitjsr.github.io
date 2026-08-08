@@ -57,6 +57,7 @@ twitter_username: som_nitjsr
 # Build settings
 #theme: just-the-docs
 remote_theme: pmarsceill/just-the-docs
+future: true
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
