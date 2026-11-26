@@ -67,32 +67,42 @@ const featuredBySection = orderedSections
     class="app-layout my-1"
   >
     <section id="hero" class="border-border border-b pt-4 pb-5">
-      <p class="text-xs font-semibold tracking-wider text-accent uppercase">
-        Somnath Shukla · Strategic Technology Leader &amp; CTO Advisor
-      </p>
-      <div class="mt-1.5 mb-2 flex flex-wrap items-center gap-3">
-        <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
-          Strategic Insights for Modern CTOs
-        </h1>
-        <a
-          target="_blank"
-          href={getAssetPath("feed.xml")}
-          class="inline-flex items-center"
-          aria-label="RSS Feed"
-          title="RSS Feed"
-        >
-          <IconRss
-            width={20}
-            height={20}
-            class="stroke-accent scale-110 stroke-3 rtl:-rotate-90"
-          />
-          <span class="sr-only">RSS Feed</span>
-        </a>
+      <div class="flex flex-col-reverse items-start justify-between gap-4 sm:flex-row sm:items-center">
+        <div class="min-w-0 flex-1">
+          <p class="text-xs font-semibold tracking-wider text-accent uppercase">
+            Somnath Shukla · Strategic Technology Leader Advisor
+          </p>
+          <div class="mt-1.5 mb-2 flex flex-wrap items-center gap-3">
+            <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+              Strategic Insights for Modern CTOs
+            </h1>
+            <a
+              target="_blank"
+              href={getAssetPath("feed.xml")}
+              class="inline-flex items-center"
+              aria-label="RSS Feed"
+              title="RSS Feed"
+            >
+              <IconRss
+                width={20}
+                height={20}
+                class="stroke-accent scale-110 stroke-3 rtl:-rotate-90"
+              />
+              <span class="sr-only">RSS Feed</span>
+            </a>
+          </div>
+          <p class="text-foreground/90 max-w-2xl text-sm leading-relaxed sm:text-base">
+            Welcome to the intersection of technology strategy and executive leadership. Here, we explore how great Technical Leaders think beyond code—building platforms, driving transformation, and leading with strategic influence.
+          </p>
+        </div>
+        <img
+          src={getAssetPath("assets/avatar.jpg")}
+          alt="Somnath Shukla"
+          width={112}
+          height={112}
+          class="size-20 shrink-0 rounded-full border-2 border-accent/30 object-cover shadow-sm sm:size-28"
+        />
       </div>
-
-      <p class="text-foreground/90 max-w-2xl text-sm leading-relaxed sm:text-base">
-        Welcome to the intersection of technology strategy and executive leadership. Here, we explore how great Technical Leaders think beyond code—building platforms, driving transformation, and leading with strategic influence
-      </p>
 
       <blockquote class="mt-3 border-s-2 border-accent ps-3.5 text-sm italic text-foreground/85">
         <span class="not-italic font-semibold text-foreground"

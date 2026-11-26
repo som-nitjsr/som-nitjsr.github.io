@@ -48,12 +48,19 @@ Through this blog, I share insights on:
 - **Digital Transformation**: Aligning technology with business outcomes
 - **Emerging Tech Strategy**: Navigating AI, IoT, and cloud innovation
 
+## Advisory & Speaking
+
+I partner with founders, CTOs, and engineering organizations on executive technology strategy and keynote talks covering:
+- **Enterprise Agentic AI Architecture:** Context engineering, agent harnesses, and production governance
+- **Platform Economics & Modernization:** Turning legacy systems into AI-ready internal platforms
+- **Architect-to-CTO Leadership:** Executive communication, board storytelling, and organizational topologies
+
 ## Connect & Collaborate
 
-- **Professional Credentials**: [Credly Profile](https://www.credly.com/users/somnath-shukla/badges)
-- **LinkedIn**: [Connect for strategic discussions](https://www.linkedin.com/in/somnath-shukla/)
-- **Speaking**: Available for leadership and digital transformation talks
+- **LinkedIn:** [Connect for CTO advisory or speaking inquiries](https://www.linkedin.com/in/somnath-shukla/)
+- **Professional Credentials:** [Credly Profile (CKA, CCSP & Cloud Certifications)](https://www.credly.com/users/somnath-shukla/badges)
+- **GitHub:** [Open-source architecture & code](https://github.com/som-nitjsr)
 
 ---
 
-*Ready to transform your technology strategy? Let's discuss how platform thinking and strategic leadership can accelerate your digital transformation journey.*
+*Ready to elevate your technology strategy? Connect on [LinkedIn](https://www.linkedin.com/in/somnath-shukla/) to discuss how platform thinking and strategic leadership can accelerate your digital transformation journey.*

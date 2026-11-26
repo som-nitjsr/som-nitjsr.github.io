@@ -74,7 +74,7 @@ export default defineConfig({
       fallbacks: ["ui-sans-serif", "system-ui", "sans-serif"],
       weights: [600, 700, 800],
       styles: ["normal"],
-      formats: ["woff2"],
+      formats: ["woff2", "ttf"],
     },
     {
       name: "Inter",

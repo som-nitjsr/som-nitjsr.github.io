@@ -35,19 +35,29 @@ const showComments = post.data.comments === true;
 ---
 
 <section class="mt-10 rounded-lg border border-border bg-muted/25 p-5">
-  <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-    <div>
-      <p class="text-xs font-semibold tracking-wider text-accent uppercase">
-        Written by
-      </p>
-      <h2 class="mt-0.5 text-lg font-bold text-foreground">
-        {config.site.author}
-      </h2>
-      <p class="mt-1 text-sm text-foreground/85">
-        Strategic Technology Leader &amp; CTO Advisor (19+ yrs · IIM Ahmedabad ·
-        NIT Jamshedpur · CKA · CCSP). Writing on enterprise AI, platform
-        thinking, and executive leadership.
-      </p>
+  <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div class="flex items-start gap-4">
+      <img
+        src={getAssetPath("assets/avatar.jpg")}
+        alt={config.site.author}
+        width={64}
+        height={64}
+        loading="lazy"
+        class="size-14 shrink-0 rounded-full border border-border object-cover sm:size-16"
+      />
+      <div>
+        <p class="text-xs font-semibold tracking-wider text-accent uppercase">
+          Written by
+        </p>
+        <h2 class="mt-0.5 text-lg font-bold text-foreground">
+          {config.site.author}
+        </h2>
+        <p class="mt-1 text-sm text-foreground/85">
+          Strategic Technology Leader &amp; CTO Advisor (20+ yrs · IIM
+          Ahmedabad · NIT Jamshedpur · CKA · CCSP). Writing on enterprise AI,
+          platform thinking, and executive leadership.
+        </p>
+      </div>
     </div>
     <div class="flex shrink-0 flex-wrap gap-2 text-xs font-semibold">
       <a
