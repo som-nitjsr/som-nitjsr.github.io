@@ -1,0 +1,67 @@
+---
+import config from "@/config";
+import { getAssetPath } from "@/utils/withBase";
+
+type Props = {
+  title: string;
+  description: string;
+};
+
+const { site } = config;
+const siteUrl = site.url.replace(/\/+$/, "");
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${siteUrl}/#organization`,
+  name: site.title,
+  url: siteUrl,
+  logo: `${siteUrl}/assets/logo.svg`,
+  description: site.description,
+  founder: {
+    "@type": "Person",
+    "@id": `${siteUrl}/about/#person`,
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/somnath-shukla/",
+    "https://github.com/som-nitjsr",
+  ],
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${siteUrl}/about/#person`,
+  name: site.author,
+  url: `${siteUrl}/about/`,
+  jobTitle: "Strategic Technology Leader",
+  description:
+    "CTO advisor specializing in digital transformation, platform thinking, and enterprise AI architecture.",
+  worksFor: {
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/somnath-shukla/",
+    "https://github.com/som-nitjsr",
+    "https://www.credly.com/users/somnath-shukla/badges",
+  ],
+};
+
+const orgJson = JSON.stringify(organizationSchema).replace(/</g, "\\u003c");
+const personJson = JSON.stringify(personSchema).replace(/</g, "\\u003c");
+---
+
+<link
+  rel="shortcut icon"
+  type="image/png"
+  href={getAssetPath("assets/favicon.png")}
+/>
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title={`${site.title} (RSS)`}
+  href={new URL(getAssetPath("feed.xml"), siteUrl).href}
+/>
+<script type="application/ld+json" is:inline set:html={orgJson} />
+<script type="application/ld+json" is:inline set:html={personJson} />
