@@ -16,6 +16,13 @@ featured_section: Agentic AI
 featured_rank: 1
 comments: true
 identifier: GenAI & Business Strategy
+faq:
+  - q: "How does Generative AI break traditional platform economics?"
+    a: "Traditional platforms relied on humans browsing apps, forming habits, and facing switching costs. When AI agents discover, compare, and transact across APIs on a user's behalf, UI lock-in weakens and platforms compete on price, speed, and reliability."
+  - q: "Do network effects still matter in the AI agent era?"
+    a: "Yes, but they shift from the consumer UI layer to the agent and API layer—favoring platforms that optimize for agent evaluation criteria, clean structured APIs, and low-friction transaction execution."
+  - q: "What becomes the primary competitive moat for platforms when agents mediate demand?"
+    a: "Operational excellence—response latency, inventory or data quality, trust and safety, and economically justified transparent pricing that resists agent arbitrage."
 ---
 
 

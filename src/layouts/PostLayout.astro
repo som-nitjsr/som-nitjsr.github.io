@@ -14,6 +14,9 @@ type Props = {
   canonicalURL?: string;
   pubDatetime?: Date;
   modDatetime?: Date | null;
+  categories?: string[];
+  tags?: string[];
+  wordCount?: number;
   faq?: FaqItem[];
 };
 
@@ -27,17 +30,31 @@ const {
   canonicalURL,
   pubDatetime,
   modDatetime,
+  categories,
+  tags,
+  wordCount,
   faq,
 } = Astro.props;
+
+const resolvedCanonical =
+  canonicalURL ?? new URL(Astro.url.pathname, Astro.site).href;
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   headline: title ?? site.title,
   description: description ?? site.description,
+  url: resolvedCanonical,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": resolvedCanonical,
+  },
   image: ogImage,
   ...(pubDatetime && { datePublished: pubDatetime.toISOString() }),
   ...(modDatetime && { dateModified: modDatetime.toISOString() }),
+  ...(categories && categories.length > 0 && { articleSection: categories[0] }),
+  ...(tags && tags.length > 0 && { keywords: tags.join(", ") }),
+  ...(wordCount && { wordCount }),
   author: [
     {
       "@type": "Person",

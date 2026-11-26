@@ -80,6 +80,7 @@ const {
   pubDatetime,
   modDatetime,
   timezone,
+  categories,
   tags,
   hideEditPost,
   hideToc,
@@ -114,6 +115,9 @@ const ogImage = ogImageUrl
   canonicalURL={canonicalURL}
   pubDatetime={pubDatetime}
   modDatetime={modDatetime}
+  categories={categories}
+  tags={tags}
+  wordCount={words}
   faq={faq}
 >
   <Header />
@@ -160,6 +164,27 @@ const ogImage = ogImageUrl
         ]}
       >
         <Content />
+        {
+          faq && faq.length > 0 && (
+            <section class="mt-10 border-t border-border pt-6">
+              <h2 id="frequently-asked-questions">
+                Frequently Asked Questions
+              </h2>
+              <div class="space-y-4">
+                {faq.map(item => (
+                  <div class="rounded-lg border border-border bg-muted/20 p-4">
+                    <h3 class="mt-0 mb-1.5 text-base font-bold text-foreground">
+                      {item.q}
+                    </h3>
+                    <p class="my-0 text-sm leading-relaxed text-foreground/90">
+                      {item.a}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )
+        }
       </article>
     </div>
 

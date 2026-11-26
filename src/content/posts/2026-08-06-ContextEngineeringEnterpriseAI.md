@@ -16,6 +16,13 @@ featured_section: Agentic AI
 featured_rank: 1
 comments: true
 identifier: ContextEngineering
+faq:
+  - q: "What is context engineering in enterprise AI?"
+    a: "Context engineering is the architectural discipline of designing, governing, and assembling what an AI agent is allowed to see at decision time—including retrieval, memory, ranking, permission filtering, and data provenance."
+  - q: "How does context engineering differ from prompt engineering?"
+    a: "Prompt engineering focuses on how you phrase instructions to a model, whereas context engineering governs the shared infrastructure layer that curates, secures, and delivers grounded enterprise context before the model runs."
+  - q: "Why do enterprise AI pilots fail in production even with strong LLMs?"
+    a: "Production failures usually stem from missing or ungoverned context—stale documents, leaked permissions, missing regional constraints, or fragmented RAG scripts—rather than model reasoning quality."
 ---
 
 Every enterprise AI initiative starts the same way: a pilot that feels magical, a demo that wins the boardroom, and a production rollout that quietly disappoints.

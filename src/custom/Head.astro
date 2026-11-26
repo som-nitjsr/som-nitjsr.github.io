@@ -34,13 +34,33 @@ const personSchema = {
   "@id": `${siteUrl}/about/#person`,
   name: site.author,
   url: `${siteUrl}/about/`,
-  jobTitle: "Strategic Technology Leader",
+  image: `${siteUrl}/assets/avatar.jpg`,
+  jobTitle: "Strategic Technology Leader & CTO Advisor",
   description:
-    "CTO advisor specializing in digital transformation, platform thinking, and enterprise AI architecture.",
+    "Strategic technology leader and CTO advisor with 20+ years of experience specializing in digital transformation, platform thinking, and enterprise AI architecture.",
   worksFor: {
     "@type": "Organization",
     "@id": `${siteUrl}/#organization`,
   },
+  alumniOf: [
+    {
+      "@type": "CollegeOrUniversity",
+      name: "Indian Institute of Management Ahmedabad",
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      name: "National Institute of Technology Jamshedpur",
+    },
+  ],
+  knowsAbout: [
+    "Agentic AI",
+    "Context Engineering",
+    "Agent Harness Architecture",
+    "Platform Thinking",
+    "Digital Transformation",
+    "Enterprise AI Governance",
+    "CTO Leadership",
+  ],
   sameAs: [
     "https://www.linkedin.com/in/somnath-shukla/",
     "https://github.com/som-nitjsr",

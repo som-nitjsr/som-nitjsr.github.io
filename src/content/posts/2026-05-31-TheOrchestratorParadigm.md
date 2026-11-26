@@ -16,6 +16,13 @@ featured_rank: 1
 ogImage: /assets/orchestrator.png
 comments: true
 identifier: OrchestratorParadigm
+faq:
+  - q: "What is the 100x Orchestrator paradigm in software engineering?"
+    a: "It is an AI-native engineering model where developers shift from writing boilerplate syntax to acting as product architects who define boundaries, specify precise intent, and verify output from fleets of AI executors."
+  - q: "How should CTOs restructure teams for AI-native engineering?"
+    a: "Replace linear assembly-line handoffs across product, design, coding, and QA with autonomous micro-cells centered around Orchestrators who own end-to-end architectural alignment and verification."
+  - q: "What engineering metrics replace story points and lines of code?"
+    a: "CTOs should measure system reliability, intent precision (iterations needed to guide AI to the right outcome), time to comprehension during incidents, and change failure rate."
 ---
 
 <img src='/assets/orchestrator.png' alt='The Orchestrator Paradigm' style='height:200px; width: 100%; border-radius: 8px;'>

@@ -16,6 +16,13 @@ featured_section: Agentic AI
 featured_rank: 2
 comments: true
 identifier: AgentHarness
+faq:
+  - q: "What is an agent harness in AI product architecture?"
+    a: "An agent harness is the runtime shell wrapping an LLM with persistent rules, on-demand procedural skills, typed tool integrations (such as MCP), and an execution loop that governs capability, conduct, and action."
+  - q: "How does an agent harness differ from context engineering?"
+    a: "Context engineering determines what an agent is allowed to see, while the agent harness determines what an agent is allowed to do—enforcing policies, tool authorization, and human-in-the-loop approvals."
+  - q: "Why isn't a system prompt enough to govern enterprise AI agents?"
+    a: "System prompts are suggestions the model can misinterpret or ignore; high-risk actions like refunds or record updates require deterministic runtime enforcement through a tool broker and policy gateway."
 ---
 
 You fixed retrieval. You tuned the prompts. You indexed the knowledge base. The agent still issued a refund it wasn't authorized to make, called an API with the wrong credentials, and skipped the escalation path your runbook defines in plain English.
