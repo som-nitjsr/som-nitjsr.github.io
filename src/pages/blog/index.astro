@@ -1,0 +1,68 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Card from "@/components/Card.astro";
+import Footer from "@/components/Footer.astro";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import { getAssetPath } from "@/utils/withBase";
+import config from "@/config";
+
+const posts = getSortedPosts(await getCollection("posts"));
+
+const byCategory = new Map<string, typeof posts>();
+for (const post of posts) {
+  const cat = post.data.categories?.[0] || "General";
+  const list = byCategory.get(cat) ?? [];
+  list.push(post);
+  byCategory.set(cat, list);
+}
+
+const sortedCategories = Array.from(byCategory.entries()).sort(([a], [b]) =>
+  a.localeCompare(b)
+);
+---
+
+<Layout
+  title={`Blog Posts | ${config.site.title}`}
+  description="Expert insights, articles, and thought leadership on technology strategy, CTO leadership, and digital innovation."
+>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main
+    pageTitle="Blog Posts"
+    pageDesc="Strategic insights and thought leadership content for CTOs and technology leaders."
+  >
+    {
+      sortedCategories.map(([category, catPosts]) => (
+        <section class="mb-10">
+          <h2 class="border-b border-border pb-2 text-2xl font-bold">
+            {category}
+          </h2>
+          <ul>
+            {catPosts.map(post => (
+              <Card variant="h3" {...post} />
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+
+    <p class="mt-8 border-t border-border pt-4 text-sm italic opacity-85">
+      Prefer RSS? Subscribe via{" "}
+      <a
+        href={getAssetPath("feed.xml")}
+        class="text-accent underline decoration-dashed underline-offset-4"
+      >
+        /feed.xml
+      </a>
+      .
+    </p>
+  </Main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,297 @@
+---
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import IconRss from "@/assets/icons/IconRss.svg";
+import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Socials from "@/components/Socials.astro";
+import Card from "@/components/Card.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import { getPostUrl } from "@/utils/getPostPaths";
+import { getPostSummary } from "@/utils/getPostSummary";
+import { getAssetPath } from "@/utils/withBase";
+import { useTranslations } from "@/i18n";
+import config from "@/config";
+
+const { socials, posts: postsConfig } = config;
+
+const locale = Astro.currentLocale ?? config.site.lang;
+const t = useTranslations(locale);
+
+const posts = await getCollection("posts");
+const sortedPosts = getSortedPosts(posts);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+const recentPosts = sortedPosts;
+const homePath = getRelativeLocaleUrl(locale, "");
+
+const MAX_PER_SECTION = 3;
+
+const orderedSections = [
+  "Agentic AI",
+  "CTO Leadership",
+  "Digital Transformation",
+  "Security & Innovation",
+];
+
+const featuredBySection = orderedSections
+  .map(section => {
+    const allInSection = featuredPosts
+      .filter(p => p.data.featured_section === section)
+      .sort((a, b) => {
+        const rankDiff =
+          (a.data.featured_rank ?? 999) - (b.data.featured_rank ?? 999);
+        if (rankDiff !== 0) return rankDiff;
+        return (
+          new Date(b.data.pubDatetime).getTime() -
+          new Date(a.data.pubDatetime).getTime()
+        );
+      });
+    return {
+      section,
+      totalCount: allInSection.length,
+      items: allInSection.slice(0, MAX_PER_SECTION),
+    };
+  })
+  .filter(group => group.items.length > 0);
+---
+
+<Layout>
+  <Header />
+  <main
+    id="main-content"
+    data-layout="index"
+    data-home-path={homePath}
+    class="app-layout my-1"
+  >
+    <section id="hero" class="border-border border-b pt-4 pb-5">
+      <p class="text-xs font-semibold tracking-wider text-accent uppercase">
+        Somnath Shukla · Strategic Technology Leader &amp; CTO Advisor
+      </p>
+      <div class="mt-1.5 mb-2 flex flex-wrap items-center gap-3">
+        <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+          Strategic Insights for Modern CTOs
+        </h1>
+        <a
+          target="_blank"
+          href={getAssetPath("feed.xml")}
+          class="inline-flex items-center"
+          aria-label="RSS Feed"
+          title="RSS Feed"
+        >
+          <IconRss
+            width={20}
+            height={20}
+            class="stroke-accent scale-110 stroke-3 rtl:-rotate-90"
+          />
+          <span class="sr-only">RSS Feed</span>
+        </a>
+      </div>
+
+      <p class="text-foreground/90 max-w-2xl text-sm leading-relaxed sm:text-base">
+        Welcome to the intersection of technology strategy and executive leadership. Here, we explore how great Technical Leaders think beyond code—building platforms, driving transformation, and leading with strategic influence
+      </p>
+
+      <blockquote class="mt-3 border-s-2 border-accent ps-3.5 text-sm italic text-foreground/85">
+        <span class="not-italic font-semibold text-foreground"
+          >Leadership Philosophy:</span
+        >{" "}
+        “Technology is the tool. People drive transformation. Great CTOs don’t
+        just align tech—they align influence across functions.”
+      </blockquote>
+
+      <div class="mt-3 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+        <span class="rounded-full border border-border bg-muted/40 px-2.5 py-0.5 font-medium text-foreground/85">
+          20+ Yrs Experience
+        </span>
+        <span class="rounded-full border border-border bg-muted/40 px-2.5 py-0.5 font-medium text-foreground/85">
+          Exec MBA, IIM Ahmedabad
+        </span>
+        <span class="rounded-full border border-border bg-muted/40 px-2.5 py-0.5 font-medium text-foreground/85">
+          B.Tech, NIT Jamshedpur
+        </span>
+      
+      </div>
+
+      <div class="mt-4 flex flex-wrap items-center justify-between gap-3 text-sm">
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+          <a
+            href="https://www.linkedin.com/in/somnath-shukla/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center rounded-md bg-accent px-3 py-1.5 text-xs font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+          >
+            Connect for Advisory &amp; Speaking →
+          </a>
+          <LinkButton
+            class="text-accent font-medium underline decoration-dashed underline-offset-4"
+            href={getRelativeLocaleUrl(locale, "about")}
+          >
+            About Somnath
+          </LinkButton>
+          <span class="text-muted-foreground">·</span>
+          <a
+            href="https://www.credly.com/users/somnath-shukla/badges"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-accent font-medium underline decoration-dashed underline-offset-4"
+          >
+            Credly Badges
+          </a>
+        </div>
+        {
+          socials.length > 0 && (
+            <div class="flex items-center gap-2">
+              <Socials />
+            </div>
+          )
+        }
+      </div>
+    </section>
+
+    {
+      featuredBySection.length > 0 && (
+        <section id="featured" class="border-border border-b pt-10 pb-8">
+          <div class="flex items-baseline justify-between gap-4">
+            <h2 class="text-2xl font-bold tracking-tight">
+              Featured Insights
+            </h2>
+            <a
+              href={getRelativeLocaleUrl(locale, "blog")}
+              class="text-sm font-medium text-accent hover:underline decoration-dashed underline-offset-4"
+            >
+              View full archive →
+            </a>
+          </div>
+          <div class="mt-6 grid gap-5 sm:grid-cols-2">
+            {featuredBySection.map(({ section, items }) => (
+              <div class="flex flex-col rounded-lg border border-border bg-muted/20 p-5">
+                <h3 class="border-b border-border pb-2 text-lg font-bold text-foreground">
+                  {section}
+                </h3>
+                <ul class="mt-3.5 space-y-3.5">
+                  {items.map(post => (
+                    <li>
+                      <a
+                        href={getPostUrl(post.id, post.filePath, locale)}
+                        class="block text-sm font-semibold leading-snug text-accent hover:underline decoration-dashed underline-offset-4"
+                      >
+                        {post.data.title}
+                      </a>
+                      <p class="mt-1 line-clamp-1 text-xs text-muted-foreground">
+                        {getPostSummary(post, 100)}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    <section class="border-border border-b py-8">
+      <h2 class="text-2xl font-bold tracking-tight">
+        Strategic Expertise Areas
+      </h2>
+      <div class="mt-4 overflow-x-auto rounded-lg border border-border">
+        <table class="w-full text-left text-sm">
+          <thead class="border-b border-border bg-muted/35">
+            <tr>
+              <th class="px-4 py-2.5 font-bold text-foreground">Leadership</th>
+              <th class="px-4 py-2.5 font-bold text-foreground">Technology</th>
+              <th class="px-4 py-2.5 font-bold text-foreground">Innovation</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border text-foreground/85">
+            <tr>
+              <td class="px-4 py-2">• Executive Storytelling</td>
+              <td class="px-4 py-2">• Multi-Cloud Architecture</td>
+              <td class="px-4 py-2">• Generative &amp; Agentic AI</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">• Strategic Influence</td>
+              <td class="px-4 py-2">• Platform Thinking</td>
+              <td class="px-4 py-2">• IoT &amp; Edge Computing</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">• Financial Literacy</td>
+              <td class="px-4 py-2">• Security-First Design</td>
+              <td class="px-4 py-2">• Digital Transformation</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">• Cross-Functional Alignment</td>
+              <td class="px-4 py-2">• Kubernetes &amp; Containers</td>
+              <td class="px-4 py-2">• Sustainable Tech</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="border-border border-b py-8">
+      <h2 class="text-2xl font-bold tracking-tight">
+        Why This Matters for CTOs
+      </h2>
+      <ul class="mt-3 space-y-2 text-sm text-foreground/90">
+        <li>
+          <strong class="font-semibold text-foreground"
+            >Technology serves business strategy</strong
+          > — not the other way around
+        </li>
+        <li>
+          <strong class="font-semibold text-foreground"
+            >Platform thinking</strong
+          > creates exponential value over project-based approaches
+        </li>
+        <li>
+          <strong class="font-semibold text-foreground"
+            >Strategic influence</strong
+          > matters more than technical control
+        </li>
+        <li>
+          <strong class="font-semibold text-foreground"
+            >Digital transformation</strong
+          > requires cultural change, not just technology
+        </li>
+      </ul>
+    </section>
+
+    {
+      recentPosts.length > 0 && (
+        <section id="recent-posts" class="pt-8 pb-4">
+          <h2 class="text-2xl font-bold tracking-tight">
+            {t.home.recentPosts}
+          </h2>
+          <ul>
+            {recentPosts.slice(0, postsConfig.perIndex).map(data => (
+              <Card variant="h3" {...data} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <div class="my-6 text-center">
+      <LinkButton href={getRelativeLocaleUrl(locale, "posts")}>
+        {t.home.allPosts}
+        <IconArrowRight class="inline-block rtl:-rotate-180" />
+      </LinkButton>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const indexLayout = (document.querySelector("#main-content") as HTMLElement)
+      ?.dataset;
+    const baseRoot = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+    if (indexLayout?.layout) {
+      sessionStorage.setItem("backUrl", indexLayout.homePath ?? baseRoot);
+    }
+  });
+</script>

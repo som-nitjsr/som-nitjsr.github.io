@@ -1,0 +1,53 @@
+---
+import { getCollection } from "astro:content";
+import type { GetStaticPathsOptions } from "astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Main from "@/components/Main.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Card from "@/components/Card.astro";
+import Footer from "@/components/Footer.astro";
+import Pagination from "@/components/Pagination.astro";
+import { getUniqueCategories } from "@/utils/getUniqueCategories";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import { slugifyAll } from "@/utils/slugify";
+import config from "@/config";
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const posts = await getCollection("posts", ({ data }) => !data.draft);
+  const categories = getUniqueCategories(posts);
+
+  return categories.flatMap(({ category, categoryName }) => {
+    const catPosts = getSortedPosts(
+      posts.filter(({ data }) => slugifyAll(data.categories).includes(category))
+    );
+
+    return paginate(catPosts, {
+      params: { category },
+      props: { categoryName },
+      pageSize: config.posts.perPage,
+    });
+  });
+}
+
+const { page, categoryName } = Astro.props;
+---
+
+<Layout title={`Category: ${categoryName} | ${config.site.title}`}>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main
+    pageTitle={`Category: ${categoryName}`}
+    pageDesc={`All articles in "${categoryName}".`}
+  >
+    <ul>
+      {page.data.map(data => <Card {...data} />)}
+    </ul>
+  </Main>
+
+  <Pagination {page} />
+
+  <Footer noMarginTop={page.lastPage > 1} />
+</Layout>

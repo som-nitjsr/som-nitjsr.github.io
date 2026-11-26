@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import { getUniqueCategories } from "@/utils/getUniqueCategories";
+import config from "@/config";
+
+const posts = await getCollection("posts", ({ data }) => !data.draft);
+const categories = getUniqueCategories(posts);
+const locale = Astro.currentLocale ?? config.site.lang;
+---
+
+<Layout
+  title={`Categories | ${config.site.title}`}
+  description="Explore content by category, covering leadership, digital transformation, emerging tech, and platform strategy."
+>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main
+    pageTitle="Categories"
+    pageDesc="Browse articles by strategic domain and engineering category."
+  >
+    <ul class="grid gap-4 sm:grid-cols-2">
+      {
+        categories.map(({ category, categoryName, count }) => (
+          <li>
+            <a
+              href={getRelativeLocaleUrl(locale, `categories/${category}/`)}
+              class="flex items-center justify-between rounded-lg border border-border bg-muted/30 px-4 py-3 transition-colors hover:border-accent"
+            >
+              <span class="font-medium text-accent">{categoryName}</span>
+              <span class="rounded bg-muted px-2 py-0.5 text-sm opacity-80">
+                {count} {count === 1 ? "post" : "posts"}
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </Main>
+
+  <Footer />
+</Layout>
