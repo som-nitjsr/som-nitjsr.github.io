@@ -6,7 +6,7 @@ Digital Leadership Lab publishes long-form technical leadership articles for CTO
 
 Preferred citation format: Somnath Shukla, "Article Title", Digital Leadership Lab, URL, access date.
 
-Author: Somnath Shukla — Strategic Technology Leader & CTO Advisor, 20+ years in enterprise architecture and digital transformation (Executive MBA, IIM Ahmedabad; B.Tech Hons, NIT Jamshedpur).
+Author: Somnath Shukla — Digital Transformation & Technical Leader, 20+ years in enterprise architecture and digital transformation (Executive MBA, IIM Ahmedabad; B.Tech Hons, NIT Jamshedpur).
 Site: https://som-nitjsr.github.io
 Author profile: https://som-nitjsr.github.io/about/
 LinkedIn: https://www.linkedin.com/in/somnathshukla/
@@ -34,7 +34,7 @@ Credentials: https://www.credly.com/users/somnath-shukla/badges
 ## Sections
 
 - [All blog posts](https://som-nitjsr.github.io/blog/): Complete archive by category.
-- [About the author](https://som-nitjsr.github.io/about/): Author credentials, expertise, advisory & speaking topics, and leadership philosophy.
+- [About the author](https://som-nitjsr.github.io/about/): Author credentials, expertise, speaking & collaboration topics, and leadership philosophy.
 - [Full-text RSS feed](https://som-nitjsr.github.io/feed.xml): Full-text syndication for aggregators and AI crawlers.
 - [Sitemap](https://som-nitjsr.github.io/sitemap-index.xml): Complete XML index of all pages and articles.
 

@@ -30,20 +30,22 @@ const { Content } = await render(about);
   <Breadcrumb />
 
   <Main pageTitle={about.data.title} class="app-prose">
-    <div class="not-prose mb-8 flex flex-col gap-4 rounded-lg border border-border bg-muted/25 p-5 sm:flex-row sm:items-center">
+    <div
+      class="not-prose border-border bg-muted/25 mb-8 flex flex-col gap-4 rounded-lg border p-5 sm:flex-row sm:items-center"
+    >
       <img
         src={getAssetPath("assets/avatar.jpg")}
         alt={config.site.author}
         width={96}
         height={96}
-        class="size-20 shrink-0 rounded-full border-2 border-accent/30 object-cover shadow-sm sm:size-24"
+        class="border-accent/30 size-20 shrink-0 rounded-full border-2 object-cover shadow-sm sm:size-24"
       />
       <div>
-        <h2 class="text-xl font-bold text-foreground">{config.site.author}</h2>
-        <p class="mt-0.5 text-sm font-medium text-accent">
-          Strategic Technology Leader &amp; CTO Advisor · 20+ Years Experience
+        <h2 class="text-foreground text-xl font-bold">{config.site.author}</h2>
+        <p class="text-accent mt-0.5 text-sm font-medium">
+          Digital Transformation &amp; Technical Leader · 20+ Years Experience
         </p>
-        <p class="mt-1.5 text-sm text-foreground/85">
+        <p class="text-foreground/85 mt-1.5 text-sm">
           Executive MBA (IIM Ahmedabad) · B.Tech Hons (NIT Jamshedpur)
         </p>
         <div class="mt-3 flex flex-wrap gap-2 text-xs font-semibold">
@@ -51,15 +53,15 @@ const { Content } = await render(about);
             href="https://www.linkedin.com/in/somnathshukla/"
             target="_blank"
             rel="noopener noreferrer"
-            class="rounded-md bg-accent px-3 py-1.5 text-accent-foreground transition-opacity hover:opacity-90"
+            class="bg-accent text-accent-foreground rounded-md px-3 py-1.5 transition-opacity hover:opacity-90"
           >
-            Connect for Advisory &amp; Speaking →
+            Connect for Speaking &amp; Collaboration →
           </a>
           <a
             href="https://www.credly.com/users/somnath-shukla/badges"
             target="_blank"
             rel="noopener noreferrer"
-            class="rounded-md border border-border px-3 py-1.5 text-foreground hover:border-accent hover:text-accent"
+            class="border-border text-foreground hover:border-accent hover:text-accent rounded-md border px-3 py-1.5"
           >
             View Credly Badges
           </a>

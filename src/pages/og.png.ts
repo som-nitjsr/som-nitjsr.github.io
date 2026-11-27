@@ -68,7 +68,8 @@ export const GET: APIRoute = async context => {
                       textTransform: "uppercase",
                       marginBottom: "18px",
                     },
-                    children: "CTO Advisory · Enterprise AI · Platform Strategy",
+                    children:
+                      "Technical Leadership · Enterprise AI · Business Impact",
                   },
                 },
                 {

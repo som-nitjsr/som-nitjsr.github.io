@@ -193,7 +193,7 @@ export const GET: APIRoute = async ({ props, url }) => {
                                   color: "#94a3b8",
                                 },
                                 children:
-                                  "Strategic Technology Leader · CTO Advisor",
+                                  "Digital Transformation · Technical Leader",
                               },
                             },
                           ],

@@ -1,6 +1,6 @@
 ---
 title: About
-description: "Meet Somnath Shukla, a strategic technology leader and CTO advisor specializing in digital transformation, platform thinking, and executive leadership."
+description: "Meet Somnath Shukla, a digital transformation and technical leader specializing in enterprise AI, platform thinking, and business impact."
 ---
 
 # From Code to Strategy: The CTO Journey
@@ -9,25 +9,28 @@ Somnath Shukla is a strategic technology leader who bridges the gap between tech
 
 ## Leadership Philosophy
 
-> *"Technology is the tool. People drive transformation. Great CTOs don't just align tech—they align influence across functions."*
+> _"Technology is the tool. People drive transformation. Great CTOs don't just align tech—they align influence across functions."_
 
 My journey from technical architect to strategic leader taught me that the most successful digital transformations happen when technology serves business strategy, not the other way around.
 
 ## Strategic Expertise
 
 **Digital Transformation Leadership**
+
 - Platform thinking and ecosystem development
 - Cross-functional strategy alignment
 - Executive storytelling and stakeholder influence
 - Financial literacy for technology investments
 
 **Technology Architecture**
+
 - Multi-cloud solution architecture (Azure, AWS, GCP)
 - Cloud-native and hybrid cloud strategies
 - Security-first design principles
 - Kubernetes and container orchestration
 
 **Emerging Technologies**
+
 - Generative AI strategy and implementation
 - IoT platform development and security
 - Edge computing and distributed systems
@@ -43,24 +46,26 @@ My journey from technical architect to strategic leader taught me that the most 
 ## Thought Leadership
 
 Through this blog, I share insights on:
+
 - **CTO Leadership**: Moving from technical authority to strategic influence
 - **Platform Thinking**: Building scalable, reusable technology foundations
 - **Digital Transformation**: Aligning technology with business outcomes
 - **Emerging Tech Strategy**: Navigating AI, IoT, and cloud innovation
 
-## Advisory & Speaking
+## Speaking & Collaboration
 
-I partner with founders, CTOs, and engineering organizations on executive technology strategy and keynote talks covering:
+I partner with engineering organizations, leadership teams, and industry events on technology strategy and keynote talks covering:
+
 - **Enterprise Agentic AI Architecture:** Context engineering, agent harnesses, and production governance
 - **Platform Economics & Modernization:** Turning legacy systems into AI-ready internal platforms
 - **Architect-to-CTO Leadership:** Executive communication, board storytelling, and organizational topologies
 
 ## Connect & Collaborate
 
-- **LinkedIn:** [Connect for CTO advisory or speaking inquiries](https://www.linkedin.com/in/somnathshukla/)
+- **LinkedIn:** [Connect for speaking, leadership, or architecture discussions](https://www.linkedin.com/in/somnathshukla/)
 - **Professional Credentials:** [Credly Profile (CKA, CCSP & Cloud Certifications)](https://www.credly.com/users/somnath-shukla/badges)
 - **GitHub:** [Open-source architecture & code](https://github.com/som-nitjsr)
 
 ---
 
-*Ready to elevate your technology strategy? Connect on [LinkedIn](https://www.linkedin.com/in/somnathshukla/) to discuss how platform thinking and strategic leadership can accelerate your digital transformation journey.*
+_Ready to elevate your technology strategy? Connect on [LinkedIn](https://www.linkedin.com/in/somnathshukla/) to discuss how platform thinking and strategic leadership can accelerate your digital transformation journey._
