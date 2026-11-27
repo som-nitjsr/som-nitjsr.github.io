@@ -31,7 +31,7 @@ export default defineAstroPaperConfig({
   socials: [
     {
       name: "linkedin",
-      url: "https://www.linkedin.com/in/somnath-shukla/",
+      url: "https://www.linkedin.com/in/somnathshukla/",
       linkTitle: "Somnath Shukla on LinkedIn",
     },
     {

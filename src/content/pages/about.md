@@ -57,10 +57,10 @@ I partner with founders, CTOs, and engineering organizations on executive techno
 
 ## Connect & Collaborate
 
-- **LinkedIn:** [Connect for CTO advisory or speaking inquiries](https://www.linkedin.com/in/somnath-shukla/)
+- **LinkedIn:** [Connect for CTO advisory or speaking inquiries](https://www.linkedin.com/in/somnathshukla/)
 - **Professional Credentials:** [Credly Profile (CKA, CCSP & Cloud Certifications)](https://www.credly.com/users/somnath-shukla/badges)
 - **GitHub:** [Open-source architecture & code](https://github.com/som-nitjsr)
 
 ---
 
-*Ready to elevate your technology strategy? Connect on [LinkedIn](https://www.linkedin.com/in/somnath-shukla/) to discuss how platform thinking and strategic leadership can accelerate your digital transformation journey.*
+*Ready to elevate your technology strategy? Connect on [LinkedIn](https://www.linkedin.com/in/somnathshukla/) to discuss how platform thinking and strategic leadership can accelerate your digital transformation journey.*
