@@ -12,7 +12,6 @@ type Props = {
 
 const { post } = Astro.props;
 const locale = Astro.currentLocale ?? config.site.lang;
-const siteUrl = config.site.url.replace(/\/+$/, "");
 
 const allPosts = getSortedPosts(await getCollection("posts"));
 const primaryCat = post.data.categories?.[0];
@@ -26,16 +25,13 @@ const others = allPosts.filter(
 );
 const relatedPosts = [...sameCat, ...others].slice(0, 3);
 
-const postPath = getPostUrl(post.id, post.filePath, locale);
-const disqusUrl = post.data.legacyUrl
-  ? post.data.legacyUrl.trim()
-  : `${siteUrl}${postPath}`;
-const disqusIdentifier = post.data.identifier?.trim() || postPath;
-const showComments = post.data.comments === true;
+const emailSubject = encodeURIComponent(`Re: ${post.data.title}`);
 ---
 
-<section class="mt-10 rounded-lg border border-border bg-muted/25 p-5">
-  <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+<section class="border-border bg-muted/25 mt-10 rounded-lg border p-5">
+  <div
+    class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+  >
     <div class="flex items-start gap-4">
       <img
         src={getAssetPath("assets/avatar.jpg")}
@@ -43,19 +39,19 @@ const showComments = post.data.comments === true;
         width={64}
         height={64}
         loading="lazy"
-        class="size-14 shrink-0 rounded-full border border-border object-cover sm:size-16"
+        class="border-border size-14 shrink-0 rounded-full border object-cover sm:size-16"
       />
       <div>
-        <p class="text-xs font-semibold tracking-wider text-accent uppercase">
+        <p class="text-accent text-xs font-semibold tracking-wider uppercase">
           Written by
         </p>
-        <h2 class="mt-0.5 text-lg font-bold text-foreground">
+        <h2 class="text-foreground mt-0.5 text-lg font-bold">
           {config.site.author}
         </h2>
-        <p class="mt-1 text-sm text-foreground/85">
-          Strategic Technology Leader &amp; CTO Advisor (20+ yrs · IIM
-          Ahmedabad · NIT Jamshedpur). Writing on enterprise AI, platform
-          thinking, and executive leadership.
+        <p class="text-foreground/85 mt-1 text-sm">
+          Strategic Technology Leader &amp; CTO Advisor (20+ yrs · IIM Ahmedabad
+          · NIT Jamshedpur). Writing on enterprise AI, platform thinking, and
+          executive leadership.
         </p>
       </div>
     </div>
@@ -64,13 +60,13 @@ const showComments = post.data.comments === true;
         href="https://www.linkedin.com/in/somnath-shukla/"
         target="_blank"
         rel="noopener noreferrer"
-        class="rounded-md bg-accent px-3 py-1.5 text-accent-foreground transition-opacity hover:opacity-90"
+        class="bg-accent text-accent-foreground rounded-md px-3 py-1.5 transition-opacity hover:opacity-90"
       >
         Connect on LinkedIn
       </a>
       <a
         href={getAssetPath("about/")}
-        class="rounded-md border border-border px-3 py-1.5 text-foreground hover:border-accent hover:text-accent"
+        class="border-border text-foreground hover:border-accent hover:text-accent rounded-md border px-3 py-1.5"
       >
         About Somnath
       </a>
@@ -80,16 +76,16 @@ const showComments = post.data.comments === true;
 
 {
   relatedPosts.length > 0 && (
-    <section class="mt-10 border-t border-border pt-8">
+    <section class="border-border mt-10 border-t pt-8">
       <h2 class="text-xl font-semibold tracking-wide">Related articles</h2>
       <div class="mt-4 grid gap-4 sm:grid-cols-3">
         {relatedPosts.map(related => (
           <a
             href={getPostUrl(related.id, related.filePath, locale)}
-            class="group flex flex-col justify-between rounded-lg border border-border bg-muted/30 p-4 transition-colors hover:border-accent"
+            class="group border-border bg-muted/30 hover:border-accent flex flex-col justify-between rounded-lg border p-4 transition-colors"
           >
             <div>
-              <h3 class="font-semibold text-accent group-hover:underline decoration-dashed underline-offset-4">
+              <h3 class="text-accent font-semibold decoration-dashed underline-offset-4 group-hover:underline">
                 {related.data.title}
               </h3>
               <p class="mt-2 line-clamp-3 text-sm opacity-85">
@@ -113,73 +109,52 @@ const showComments = post.data.comments === true;
   )
 }
 
-<section class="mt-8 rounded-lg border border-border bg-muted/40 p-5">
-  <h3 class="text-lg font-semibold">Stay updated</h3>
-  <p class="mt-1 text-sm opacity-85">
-    Subscribe via RSS to get new CTO &amp; technology leadership articles as
-    they’re published.
-  </p>
-  <p class="mt-2 text-sm">
-    <a
-      href={getAssetPath("feed.xml")}
-      class="font-medium text-accent underline decoration-dashed underline-offset-4"
-    >
-      Subscribe to RSS (/feed.xml)
-    </a>
-  </p>
-</section>
-
-{
-  showComments && (
-    <section class="mt-10 border-t border-border pt-8">
-      <h2 class="text-xl font-semibold">Comments</h2>
-      <p class="mt-1 mb-4 text-sm opacity-80">
-        Have a question or a different perspective? Join the discussion below.
+<div class="mt-8 grid gap-4 sm:grid-cols-2">
+  <section
+    class="border-border bg-muted/40 flex flex-col justify-between rounded-lg border p-5"
+  >
+    <div>
+      <h2 class="text-lg font-semibold">Join the discussion</h2>
+      <p class="mt-1 text-sm opacity-85">
+        Have a question, counter-example, or executive perspective on this
+        article? Continue the conversation on LinkedIn or by email.
       </p>
-      <div
-        id="disqus_thread"
-        data-disqus-url={disqusUrl}
-        data-disqus-identifier={disqusIdentifier}
-        data-disqus-title={post.data.title}
-        class="rounded-lg border border-border bg-white p-4 text-black"
-      />
-      <noscript>
-        Please enable JavaScript to view the{" "}
-        <a href="https://disqus.com/?ref_noscript">
-          comments powered by Disqus.
-        </a>
-      </noscript>
-    </section>
-  )
-}
+    </div>
+    <div class="mt-4 flex flex-wrap gap-2 text-xs font-semibold">
+      <a
+        href="https://www.linkedin.com/in/somnath-shukla/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-accent text-accent-foreground rounded-md px-3 py-1.5 transition-opacity hover:opacity-90"
+      >
+        Discuss on LinkedIn
+      </a>
+      <a
+        href={`mailto:som_nitjsr@outlook.com?subject=${emailSubject}`}
+        class="border-border text-foreground hover:border-accent hover:text-accent rounded-md border px-3 py-1.5"
+      >
+        Send an email
+      </a>
+    </div>
+  </section>
 
-<script is:inline data-astro-rerun>
-  (function () {
-    const thread = document.getElementById("disqus_thread");
-    if (!thread) return;
-
-    const pageUrl = thread.dataset.disqusUrl;
-    const pageIdentifier = thread.dataset.disqusIdentifier;
-    const pageTitle = thread.dataset.disqusTitle;
-
-    window.disqus_config = function () {
-      this.page.url = pageUrl;
-      this.page.identifier = pageIdentifier;
-      this.page.title = pageTitle;
-    };
-
-    if (window.DISQUS) {
-      window.DISQUS.reset({
-        reload: true,
-        config: window.disqus_config,
-      });
-    } else {
-      const d = document;
-      const s = d.createElement("script");
-      s.src = "https://azureinout.disqus.com/embed.js";
-      s.setAttribute("data-timestamp", String(+new Date()));
-      s.async = true;
-      (d.head || d.body).appendChild(s);
-    }
-  })();
-</script>
+  <section
+    class="border-border bg-muted/40 flex flex-col justify-between rounded-lg border p-5"
+  >
+    <div>
+      <h2 class="text-lg font-semibold">Stay updated</h2>
+      <p class="mt-1 text-sm opacity-85">
+        Subscribe via RSS to get new CTO &amp; technology leadership articles as
+        they’re published.
+      </p>
+    </div>
+    <p class="mt-4 text-sm">
+      <a
+        href={getAssetPath("feed.xml")}
+        class="text-accent font-medium underline decoration-dashed underline-offset-4"
+      >
+        Subscribe to RSS (/feed.xml)
+      </a>
+    </p>
+  </section>
+</div>
